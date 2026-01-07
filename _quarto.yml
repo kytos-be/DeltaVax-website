@@ -2,8 +2,10 @@ project:
   type: website
 
 website:
-  title: "Deltavax-test"
+  title: "Deltavax"
   navbar:
+    logo: images/deltavaxx-logo.png
+    logo-width: 240
     left:
       - href: index.qmd
         text: Home
