@@ -1,6 +1,6 @@
 /* css styles */
 
-/*title page*/
+
 body {
   background-color: white;
 }
@@ -33,12 +33,3 @@ img {
   color: white !important;
   border-radius: 25px;
 }
-
-/* all page*/
-.text-justify {
-  text-align: justify;
-}
-
-
-
-

@@ -3,13 +3,28 @@ project:
 
 website:
   title: "Deltavax"
-  navbar:
+  navbar: 
+    background: dark
+    foreground: light
     logo: images/deltavaxx-logo.png
     logo-width: 240
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
+      - href: systems.qmd
+        text: Aquaculture Systems
+      - href: microbiomes.qmd
+        text: Microbiomes
+      - href: diseases.qmd
+        text: Diseases
+      - href: management.qmd
+        text: Management
+      - href: report.qmd
+        text: Report
+      - href: references.qmd
+        text: References
 
 format:
   html:
@@ -17,7 +32,7 @@ format:
       - cosmo
       - brand
     css: styles.css
-    toc: true
-
+    toc: false
+    
 editor: visual
 
