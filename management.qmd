@@ -1,14 +1,20 @@
 ---
 title: ""
-page-layout: article
+page-layout: full
+editor: source
 format: 
   html:
+    toc: true
+    toc-location: left
+    toc-depth: 2
+    toc-title: "On This Page"
+    smooth-scroll: true
     css: styles.css
 ---
 
-::: text-justify
-# 1. Factors affecting microbiome
+# What factors affect microbial health in pangasius culture systems?
 
+::: text-justify
 The study by Debnath et al. 2025 investigated the seasonal dynamics and environmental drivers shaping microbiome composition in freshwater finfish earthen aquaculture ponds in Bangladesh. The results demonstrated that seasonal variation was the primary factor influencing microbial community structure, with clear differences observed between the dry and wet seasons. The pondwater microbial diversity was at its lowest in winter (and/or in monsoon) and highest in the pre monsoon period. The microbial community structures differed across the different seasons, geographical locations, culture systems, and crop species, with season and geographical locations showing the strongest effects. Of the water physicochemistry features assessed, temperature and pH were found to have a weak but significant effect on the water microbiome content for both pangasius and tilapia ponds. These temporal changes significantly affected both microbial diversity and community composition in pond water and bottom sediments.
 
 Among the measured environmental variables, water temperature, pH, dissolved oxygen (DO), alkalinity, ammonium (NH₄⁺/NH₃), and nitrite (NO₂⁻) were identified as key determinants shaping the pond microbiomes. Elevated nutrient concentrations and organic matter accumulation promoted the proliferation of heterotrophic bacteria, while low dissolved oxygen conditions favored anaerobic and nitrogen-transforming microbial groups, particularly in pond sediments (Debnath et al., 2025).
@@ -21,8 +27,12 @@ Haider et al. (2022) the study further examined seasonal variations in bacterial
 
 Suriyadin et al. (2020) evaluated the effects of supplementing photosynthetic bacteria (*Rhodobacter* sp. and *Rhodococcus* sp.) on water quality and microbial communities in ponds culturing striped catfish (*Pangasianodon hypophthalmus*). The results demonstrated that the application of photosynthetic bacteria significantly improved key water quality parameters, particularly by reducing nitrite (NO₂⁻), total ammonia nitrogen (TAN), and total organic matter (TOM) concentrations. In addition, notable shifts in the phytoplankton community were observed, with a marked decline in the abundance of cyanobacteria (Cyanophyta), including *Anabaena*, *Merismopedia*, *Chroococcus*, and *Oscillatoria*, thereby mitigating the risk of harmful algal blooms. From a microbiological perspective, the relative abundance of pathogenic *Aeromonas* spp. decreased in relation to the total bacterial population. Overall, the application of *Rhodobacter* and *Rhodococcus* not only enhanced pond water quality but also contributed to the stabilization of microbial communities, reducing pathogen pressure and improving health management in pangasius aquaculture systems (Suriyadin et al., 2020).
 
-# **2. Microbiome Management in Aquaculture Using KYTOS Technology.**
+:::
 
+![](images/deltavaxteam.jpg)
+
+## Microbiome management in aquaculture using KYTOS technology
+:::{.text-justify}
 KYTOS technology applies a flow cytometry based approach to microbiome monitoring and management in aquaculture systems. This method enables the rapid, single cell analysis of complex microbial communities. Unlike conventional microbiological techniques, which typically focus on culturable fractions or specific target organisms, flow cytometry allows the simultaneous detection and characterization of all microbial entities present in a sample, including bacteria, microalgae, fungal spores, and other microbial particles.
 
 One of the principal advantages of this technology is its high analytical speed. Microbial assessments can be completed within approximately 30 minutes, which is substantially faster than traditional culture-based methods such as agar plate incubation that may require several days to yield results. This rapid turnaround enables near real time decision making in aquaculture management, particularly under intensive farming conditions where microbial dynamics can change rapidly in response to environmental fluctuations.
@@ -30,4 +40,29 @@ One of the principal advantages of this technology is its high analytical speed.
 In addition to speed, KYTOS technology provides a comprehensive overview of the entire microbial community rather than isolated measurements of individual pathogens. Through advanced algorithms, single cell data are translated into a set of microbiological parameters that reflect the overall health status of the system’s microbiome. These parameters differ fundamentally from traditional indicators such as colony forming units (CFU) or gene copy numbers obtained via qPCR, as they do not quantify specific pathogenic species but instead evaluate structural and functional patterns of the microbial community as a whole.
 
 By focusing on microbiome level health indicators, KYTOS technology supports a paradigm shift from pathogen centered disease control toward holistic ecosystem management. This approach allows early detection of microbial imbalance before clinical disease outbreaks occur, facilitating preventive interventions that enhance system stability, reduce disease risk, and support sustainable aquaculture production.
+
+By synthesizing current knowledge on microbiome diversity, microbial diseases, and environmental drivers in pangasius farming, this study demonstrates that understanding and managing the microbiome is essential for sustainable production. The review further illustrates that conventional pathogen focused monitoring approaches are insufficient to capture the complexity of microbial interactions within aquaculture systems.
+
+Microbiome based management technologie such as KYTOS provide a promising pathway for translating scientific insights into practical farm level applications. The integration of such tools within broader initiatives like the DELTAVAX project underscores the growing recognition that fish health management must be ecosystem oriented, preventive, and data driven. This review therefore serves as a scientific foundation supporting ongoing efforts to improve pangasius health management, reduce antibiotic dependence, and enhance the resilience of aquaculture systems in the Mekong Delta.
+
+:::
+![](images/kytostech.jpg)
+
+:::hero
+  <div style="
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  gap:30px;
+    flex-wrap:wrap;
+margin-top:30px;
+">
+<img src="images/kytos-logo.png" style="height:55px;">
+<img src="images/PHARMAQ_logo.png" style="height:40px;">
+<img src="images/Apha_logo.png" style="height:60px;">
+<img src="images/deheus-logo.png" style="height:120px;">
+<img src="images/CTU_logo.png" style="height:60px;">
+<img src="images/FeshStudio.png" style="height:50px;">
+
+</div>
 :::

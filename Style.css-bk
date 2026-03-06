@@ -1,6 +1,6 @@
 /* css styles */
 
-
+/*===== title page ===== */
 body {
   background-color: white;
 }
@@ -13,7 +13,7 @@ img {
   max-width: 100%;
 }
 
-/* change color of navbar and text*/
+/*=====  change color of navbar and text ===== */
 
 /* Fist link */
 .navbar .nav-link {
@@ -33,3 +33,44 @@ img {
   color: white !important;
   border-radius: 25px;
 }
+
+/*=====  all page ===== */
+.text-justify {
+  text-align: justify;
+}
+
+/* ===== TOC FULL OVERRIDE ===== */
+
+#TOC a {
+  color: #000 !important;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* Hover */
+#TOC a:hover {
+  color: #f5a000 !important;
+}
+
+/* Active link */
+#TOC a.active,
+#TOC .active > a,
+#TOC a.toc-active {
+  color: #f5a000 !important;
+  font-weight: 600;
+}
+
+/* Border-left màu cam thay vì xanh */
+#TOC .active {
+  border-left: 3px solid #f5a000 !important;
+}
+
+/* remove blue color bootstrap */
+:root {
+  --bs-link-color: #000;
+  --bs-link-hover-color: #f5a000;
+}
+
+
+
+

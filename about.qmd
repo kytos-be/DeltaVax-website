@@ -1,7 +1,71 @@
 ---
-title: "About"
+title: ""
+page-layout: full
+editor: source
+format:
+  html:
+    css: styles.css
 ---
 
-About this site
+::: hero
+<div style="background-image:url('images/intro.jpg');
+    height:400px;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:50px;
+    font-weight:bold;
+    text-align:center;
+    padding: 0 80px;
+    text-shadow:2px 2px 8px rgba(0,0,0,0.7);">
 
-Bacteria in pangasius
+Sustainable development of pangasius aquaculture: Managing microbiomes and farming environments
+
+</div>
+:::
+<br>
+
+::: {.text-justify}
+
+Aquaculture is one of the fastest growing animal food-producing sectors, with annual growth rates of 9.5% in the 1990s and 5.8% between 2001 and 2016 (FAO 2018). According to The State of World Fisheries and Aquaculture 2024 report from the Food and Agriculture Organization (FAO), global aquaculture production reached a historical high of 130.9 million tonnes in 2022, contributing more than 51% of total aquatic animal production and surpassing capture fisheries for the first time. Yet the sector is still constrained by a number of limitations, including inorganic nutrients, fish feces and feed waste, all of which make it difficult to maintain good water quality (Bentzon-Tilia et al. 2016a). In addition, outbreaks of microbial diseases are one of the main impediments to the sustainable growth of the industry (Stentiford et al. 2017; Shinn et al. 2018).
+
+Pangasius catfish (Pangasianodon hypophthalmus) remains one of the most significant farmed freshwater fish species worldwide. According to FAO’s Globefish reports, total global pangasius production in the first half of 2025 reached approximately 871,900 tonnes, with Vietnam targeting an annual output of up to 1.65 million tonnes by the end of the year. This species contributes significantly to global aquaculture output and international seafood trade, with exports valued over USD 2 billion and distribution across more than 140 countries.
+
+To meet the growing demand for catfish production, intensive farming systems with high stocking densities and increased feeding rates have been widely adopted. Although intensive aquaculture plays a key role in enhancing productivity, it also introduces various challenges. The accumulation of uneaten feed and metabolic waste in culture systems leads to water quality deterioration and alters the structure of microbial communities, which can ultimately compromise fish health. As a result, controlling pathogenic microorganisms in intensive systems becomes more complex and difficult (Verschuere et al., 2000). Therefore, maintaining good water quality is essential in aquaculture, as it influences not only the cultured fish but also the entire aquatic ecosystem within the environment (Khotimah et al., 2016).
+
+In aquaculture systems, modifying fish microbial communities has the potential to significantly influence health and disease outcomes (Gilbert et al. 2016; Bruijn et al. 2018). Aquatic species maintain a closer interaction with their surrounding microbiomes than terrestrial livestock (Schryver and Vadstein 2014), so these microbiomes have more significant impacts on animal health (Chen et al. 2017). Therefore, a greater understanding of the relationship between microorganisms and fish would help prevent disease, improve yields and create strategies for aquaculture expansion and improvement (Bentzon-Tilia et al. 2016b; Dittmann et al. 2017). Yet, disentangling interactions and identifying keystone species for specific functions in microbial communities have proven difficult because of the complex structure of these communities, especially when environmental impacts on population dynamics and activities are taken into consideration (Bruijn et al. 2018).
+
+The microbial community is closely and directly associated with cultured species in aquaculture systems. This study aims to systematically characterize the microbiome within pangasius farming systems and on the fish host, identify key harmful microbial agents commonly present in pangasius ponds, and examine the environmental and management factors shaping microbiome dynamics. Ultimately, this work highlights the importance and practical benefits of monitoring microbiome fluctuations for improving productivity and sustainability in aquaculture.
+:::
+
+::: hero
+<div style="
+    background-image:url('images/catfishh.jpg');
+    height:350px;
+    background-size:cover;
+    background-position:center;
+    border-radius:10px;">
+</div>
+:::
+
+:::hero
+  <div style="
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  gap:30px;
+    flex-wrap:wrap;
+margin-top:30px;
+">
+<img src="images/kytos-logo.png" style="height:55px;">
+<img src="images/PHARMAQ_logo.png" style="height:40px;">
+<img src="images/Apha_logo.png" style="height:60px;">
+<img src="images/deheus-logo.png" style="height:120px;">
+<img src="images/CTU_logo.png" style="height:60px;">
+<img src="images/FeshStudio.png" style="height:50px;">
+
+</div>
+:::

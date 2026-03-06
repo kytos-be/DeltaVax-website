@@ -1,37 +1,98 @@
 ---
 title: ""
-page-layout: article
+page-layout: full
+editor: source
 format: 
   html:
+    toc: true
+    toc-location: left
+    toc-depth: 2
+    toc-title: "On This Page"
+    smooth-scroll: true
     css: styles.css
 ---
 
+# Pangasius farming systems: An overview
+
 ::: text-justify
-# 1. Pangasius Farming Systems: An Overview
+Pangasius catfish (Pangasianodon hypophthalmus) is predominantly cultured in intensive monoculture systems, particularly in the Mekong Delta of Vietnam, which is the global center of pangasius production. Over the past decades, pangasius farming has shifted from semi intensive pond culture to highly intensive production systems characterized by high stocking densities, formulated feed use, and active water management. Traditional earthen ponds remain the most common farming structure, typically ranging from 0.5 to 5 hectares in size with water depths of 3-5 meters. These ponds are often connected to river systems to facilitate water exchange, however, this practice has gradually declined due to growing concerns regarding environmental impacts and biosecurity risks.
 
-Pangasius catfish (*Pangasianodon hypophthalmus*) is predominantly cultured in intensive monoculture systems, particularly in the Mekong Delta of Vietnam, which is the global center of pangasius production. Over the past decades, pangasius farming has shifted from semi-intensive pond culture to highly intensive production systems characterized by high stocking densities, formulated feed use, and active water management. Traditional earthen ponds remain the most common farming structure, typically ranging from 0.5 to 5 hectares in size with water depths of 3–5 meters. These ponds are often connected to river systems to facilitate water exchange; however, this practice has gradually declined due to growing concerns regarding environmental impacts and biosecurity risks.
-
-In intensive systems, pangasius is stocked at high densities, often exceeding 30–60 fish per square meter, and relies almost entirely on commercial pelleted feed. While this approach maximizes productivity, it also results in substantial organic waste accumulation from uneaten feed and fish excreta, which can significantly alter water quality and microbial dynamics within the culture environment. As a result, water management practices such as partial water exchange, aeration, and sediment removal are critical components of modern pangasius farming.
+In intensive systems, pangasius is stocked at high densities, often exceeding 30-60 fish per square meter, and relies almost entirely on commercial pelleted feed. While this approach maximizes productivity, it also results in substantial organic waste accumulation from uneaten feed and fish excreta, which can significantly alter water quality and microbial dynamics within the culture environment. As a result, water management practices such as partial water exchange, aeration, and sediment removal are critical components of modern pangasius farming.
 
 These highly intensive pond systems have enabled Vietnam to expand pangasius production significantly, supplying both domestic and international markets. However, the combination of high stocking densities, intensive feeding regimes, and frequent water exchange required to maintain acceptable water quality poses persistent management challenges, including nutrient accumulation, disease risk, and environmental discharge.
 
-In recent years, there has been growing interest in more controlled production models, including recirculating aquaculture systems (RAS) and semi-closed systems, aimed at reducing environmental impacts, improving biosecurity, and stabilizing water quality. Although RAS for pangasius is still limited compared to pond-based farming, these systems represent a promising alternative for future sustainable and disease-resilient production.
+In recent years, there has been growing interest in more controlled production models, including recirculating aquaculture systems (RAS) and semi closed systems, aimed at reducing environmental impacts, improving biosecurity, and stabilizing water quality. Although RAS for pangasius is still limited compared to pond based farming, these systems represent a promising alternative for future sustainable and disease resilient production.
 
 Overall, pangasius farming systems have evolved toward higher intensification and technological intervention, which has increased production efficiency but also heightened the need for effective management of water quality, waste, and microbial communities.
+:::
 
-## 1.1. Intensive Pond Based Pangasius Farming
+## Intensive pond based pangasius farming
 
-Intensive farming of striped catfish (*Pangasianodon hypophthalmus*) in Vietnam is predominantly based on monoculture earthen pond systems, which have become the standard commercial production model in the Mekong Delta. Ponds typically range in size from 1,000 to 10,000 m² and are usually constructed near river branches to facilitate daily water exchange through tidal flow or active pumping. Stocking densities are generally very high, commonly reaching 40-60 fish per m², in order to maximize production per unit area. Under intensive conditions, yields can reach 250-300 tons per hectare per production cycle, and in exceptional cases may exceed 500 tons per hectare per cycle (FAO, 2010; Bosma et al.,2011).
+::::::::: {.columns}
 
-The shift toward intensive pond systems has been accompanied by an increasing reliance on extruded commercial pellet feeds, which enhance growth performance but also substantially increase organic loading in pond water. Uneaten feed and fish metabolic wastes elevate concentrations of dissolved nutrients and biochemical oxygen demand (BOD), necessitating frequent water exchange and enhanced aeration to maintain water quality within acceptable limits. In practice, many pangasius farms in Vietnam replace approximately 20-40% of pond water daily, depending on the production stage (Bosma et al.,2011; Phuong & Oanh, 2010).
+::: {.column width="45%"}
+![Pangasius harvesting](images/catfish-3.jpg){width="95%" style="margin:auto; display:block;"}
+:::
 
-High stocking densities and strong intensification place considerable pressure on water quality management, nutrient loading, and disease control, requiring strict pond management practices and continuous monitoring of environmental parameters. Mortality rates in some high density systems may range from 20-25%, reflecting the substantial physiological stress imposed on fish under intensive farming conditions (Bosma et al.,2011; Phuong & Oanh, 2010).
+::: {.column width="50%"}
+::: text-justify
+Intensive farming of striped catfish (Pangasianodon hypophthalmus) in Vietnam is predominantly based on monoculture earthen pond systems, which have become the standard commercial production model in the Mekong Delta. Ponds typically range in size from 1,000 to 10,000 m² and are usually constructed near river branches to facilitate daily water exchange through tidal flow or active pumping. Stocking densities are generally very high, commonly reaching 40-60 fish per m², in order to maximize production per unit area. Under intensive conditions, yields can reach 250-300 tons per hectare per production cycle, and in exceptional cases may exceed 500 tons per hectare per cycle (FAO, 2010; Bosma et al., 2011).
 
-## 1.2. Recirculating Aquaculture Systems (RAS) for Pangasius Farming
+The shift toward intensive pond systems has been accompanied by an increasing reliance on extruded commercial pellet feeds, which enhance growth performance but also substantially increase organic loading in pond water. Uneaten feed and fish metabolic wastes elevate concentrations of dissolved nutrients and biochemical oxygen demand (BOD), necessitating frequent water exchange and enhanced aeration to maintain water quality within acceptable limits. 
+:::
+:::::::::
 
-Recirculating aquaculture systems (RAS) employ a combination of mechanical and biological filtration processes to remove suspended solids and toxic nitrogenous compounds, allowing most of the culture water to be reused rather than continuously discharged into the environment. As a result, RAS significantly reduce water consumption and nutrient emissions to surrounding ecosystems (Badiola et al.,2012; Martins et al.,2010).
+::: text-justify
+In practice, many pangasius farms in Vietnam replace approximately 20-40% of pond water daily, depending on the production stage (Bosma et al., 2011; Phuong & Oanh, 2010).
 
-In a pilot scale RAS designed for striped catfish production, fish were stocked at a density of 133 fish per m² and reached market size (approximately 810g per fish) at the end of the production cycle, with a survival rate of 81% and a feed conversion ratio (FCR) of approximately 1.6. The system required only about 600 liters of water per kilogram of fish produced, representing a 7-9 fold reduction in water use compared to conventional earthen pond systems, while also markedly reducing nitrogen and phosphorus discharge (Nguyen et al.,2020).
+High stocking densities and strong intensification place considerable pressure on water quality management, nutrient loading, and disease control, requiring strict pond management practices and continuous monitoring of environmental parameters. Mortality rates in some high density systems may range from 20-25%, reflecting the substantial physiological stress imposed on fish under intensive farming conditions  (Bosma et al., 2011; Phuong & Oanh, 2010).
+:::
+:::::::::
 
-Several studies have demonstrated that RAS can substantially reduce water use, chemical inputs, and antibiotic application, while improving survival rates and stabilizing water quality relative to intensive pond systems. Nevertheless, the large scale adoption of RAS for striped catfish farming remains limited, primarily due to high initial investment costs and the absence of strong market incentives or price premiums for RAS produced fish (Bosma & Verdegem, 2015; Martins et al.,2010).
+## Recirculating aquaculture systems (RAS) for pangasius farming
+
+::::::::: {.columns}
+
+::: {.column width="55%"}
+Recirculating aquaculture systems (RAS) employ a combination of mechanical and biological filtration processes to remove suspended solids and toxic nitrogenous compounds, allowing most of the culture water to be reused rather than continuously discharged into the environment. As a result, RAS significantly reduce water consumption and nutrient emissions to surrounding ecosystems (Badiola et al., 2012; Martins et al., 2010).
+
+In a pilot scale RAS designed for striped catfish production, fish were stocked at a density of 133 fish per m² and reached market size (approximately 810g per fish) at the end of the production cycle, with a survival rate of 81% and a feed conversion ratio (FCR) of approximately 1.6. The system required only about 600 liters of water per kilogram of fish produced, representing a 7-9 fold reduction in water use compared to conventional earthen pond systems, while also markedly reducing nitrogen and phosphorus discharge (Nguyen et al., 2020).
+:::
+
+::: {.column width="45%"}
+![Pangasius fingerlings in a RAS system](images/catfish.jpg){width="95%" style="margin:auto; display:block;"}
+:::
+
+::: text-justify
+Several studies have demonstrated that RAS can substantially reduce water use, chemical inputs, and antibiotic application, while improving survival rates and stabilizing water quality relative to intensive pond systems. Nevertheless, the large scale adoption of RAS for striped catfish farming remains limited, primarily due to high initial investment costs and the absence of strong market incentives or price premiums for RAS produced fish (Bosma & Verdegem, 2015; Martins et al., 2010).
+:::
+
+::: {layout-ncol="2"}
+
+![FreshStudio’s RAS system](images/ras-2.jpg){width="100%"}
+
+![FreshStudio’s water filtration system](images/ras-3.jpg){width="100%"}
+
+:::
+
+::: hero
+
+<div style="
+display:flex;
+justify-content:center;
+align-items:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:30px;
+">
+
+<img src="images/kytos-logo.png" style="height:55px;">
+<img src="images/PHARMAQ_logo.png" style="height:40px;">
+<img src="images/Apha_logo.png" style="height:60px;">
+<img src="images/deheus-logo.png" style="height:120px;">
+<img src="images/CTU_logo.png" style="height:60px;">
+<img src="images/FeshStudio.png" style="height:50px;">
+
+</div>
+
 :::

@@ -6,7 +6,7 @@ website:
   navbar: 
     background: dark
     foreground: light
-    logo: images/deltavaxx-logo.png
+    logo: images/deltavaxx-logo.png 
     logo-width: 240
     left:
       - href: index.qmd
@@ -21,8 +21,8 @@ website:
         text: Diseases
       - href: management.qmd
         text: Management
-      - href: report.qmd
-        text: Report
+      - href: data.qmd
+        text: Data
       - href: references.qmd
         text: References
 
@@ -34,5 +34,5 @@ format:
     css: styles.css
     toc: false
     
-editor: visual
+editor: source
 

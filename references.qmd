@@ -1,5 +1,149 @@
 ---
-title: "references"
-format: html
+title: ""
+page-layout: article
+editor: source
+format: 
+  html:
+    css: styles.css
 ---
+
+# REFERENCES 
+
+Abd El-Hack, M. E., El-Saadony, M. T., Nader, M. M., Salem, H. M., El-Tahan, A. M., Soliman, S. M., & Khafaga, A. F. (2022). Effect of environmental factors on growth performance of Nile tilapia (Oreochromis niloticus). International Journal of Biometeorology, 66, 2183–2194. <https://doi.org/10.1007/s00484-022-02352-7>
+
+Allison, S. D., & Martiny, J. B. H. (2008). Resistance, resilience, and redundancy in microbial communities. Proceedings of the National Academy of Sciences of the United States of America, 105(Suppl. 1), 11512–11519. <https://doi.org/10.1073/pnas.0801925105>
+
+Aquatic fungi and fungal diseases of fish: A review. (2023). Journal of Aquatic Pathology and Health, 15, 45-60.
+
+Azaza, M. S., Dhraïef, M. N., & Kraïem, M. M. (2008). Effects of water temperature on growth and sex ratio of juvenile Nile tilapia (Oreochromis niloticus) reared in geothermal waters in Southern Tunisia. Journal of Thermal Biology, 33(2), 98-105. <https://doi.org/10.1016/j.jtherbio.2007.10.007>
+
+Badiola, M., Mendiola, D., & Bostock, J. (2012). Recirculating aquaculture systems (RAS) analysis: Main issues on management and future challenges. Aquacultural Engineering, 51, 26-35. <https://doi.org/10.1016/j.aquaeng.2012.07.004>
+
+Bentzon-Tilia, M., Sonnenschein, E. C., & Gram, L. (2016). Monitoring and managing microbes in aquaculture: Towards a sustainable industry. Microbial Biotechnology, 9(5), 576-584. <https://doi.org/10.1111/1751-7915.12392>
+
+Bereded, N. K., Abebe, G. B., Fanta, S. W., Curto, M., Waidbacher, H., Meimberg, H., & Domig, K. J. (2022). The gut bacterial microbiome of Nile tilapia (Oreochromis niloticus) from lakes across an altitudinal gradient. BMC Microbiology, 22, Article 87. <https://doi.org/10.1186/s12866-022-02513-9>
+
+Blancheton, J. P., Attramadal, K. J. K., Michaud, L., d’Orbcastel, E. R., & Vadstein, O. (2013). Insight into bacterial population in aquaculture systems and its implication. Aquacultural Engineering, 53, 30–39. <https://doi.org/10.1016/j.aquaeng.2012.11.009>
+
+Bosma, R. H., Phuong, N. T., Potting, J., & Udo, H. M. J. (2011). Environmental impacts of intensive pangasius farming in Vietnam. Aquaculture, 315(1–2), 1–9. <https://doi.org/10.1016/j.aquaculture.2011.02.002>
+
+Cheng, A. C., Lin, H. L., Shiu, Y. L., Tyan, Y. C., & Liu, C. H. (2017). Isolation and characterization of antimicrobial peptides derived from Bacillus subtilis E20-fermented soybean meal and their use for preventing Vibrio infection in shrimp aquaculture. Fish & Shellfish Immunology, 67, 270–279. <https://doi.org/10.1016/j.fsi.2017.06.006>
+
+Chien, Y. H. (1992). Water quality requirements and management for marine shrimp culture. In J. Wyban (Ed.), Proceedings of the Special Session on Shrimp Farming (pp. 144–156). World Aquaculture Society.
+
+Crumlish, M., Thanh, P. C., Koesling, J., Tung, V. T., & Gravningen, K. (2010). Experimental challenge studies in Vietnamese catfish, Pangasianodon hypophthalmus, exposed to Edwardsiella ictaluri and Aeromonas hydrophila. Journal of Fish Diseases, 33(9), 717–722. <https://doi.org/10.1111/j.1365-2761.2010.01172.x>
+
+Dang, T. H. O., Xuan, T. T., Duyen, L. T. M., Le, N. P., & Hoang, H. A. (2021). Protective efficacy of phage PVN02 against haemorrhagic septicaemia in striped catfish Pangasianodon hypophthalmus via oral administration. Journal of Fish Diseases, 44(8), 1255–1263. <https://doi.org/10.1111/jfd.13387>
+
+De Schryver, P., & Vadstein, O. (2014). Ecological theory as a foundation to control pathogenic invasion in aquaculture. The ISME Journal, 8, 2360–2368. <https://doi.org/10.1038/ismej.2014.84>
+
+Debnath, S. C., Chaput, D. L., McMurtrie, J., Bell, A. G., Temperton, B., Mohan, C. V., Alam, M. M., Hasan, N. A., Haque, M. M., Bass, D., & Tyler, C. R. (2025). Seasonal dynamics and factors shaping microbiomes in freshwater finfish earthen aquaculture ponds in Bangladesh. Environmental Microbiome, 20, Article 38. <https://doi.org/10.1186/s40793-025-00687-5>
+
+Declercq, A. M., Haesebrouck, F., Van den Broeck, W., Bossier, P., & Decostere, A. (2013). Columnaris disease in fish: A review with emphasis on bacterium–host interactions. Veterinary Research, 44(1), Article 27.<https://doi.org/10.1186/1297-9716-44-27>
+
+Diep, C. N., Cam, P. M., Vung, N. H., Lai, T. Y., & My, N. T. X. (2009). Isolation of Pseudomonas stutzeri in wastewater of catfish ponds in the Mekong Delta and its application for wastewater treatment. Bioresource Technology, 100(14), 3787–3791. <https://doi.org/10.1016/j.biortech.2009.02.048>
+
+Dittmann, K. K., Rasmussen, B. B., Castex, M., Gram, L., & Bentzon-Tilia, M. (2017). The aquaculture microbiome at the centre of business creation. Microbial Biotechnology, 10(6), 1279–1282. <https://doi.org/10.1111/1751-7915.12877>
+
+Dung, T. T., Ngoc, N. T. N., Thinh, N. Q., Thy, D. T. M., Tuan, N. A., Shinn, A., & Crumlish, M. (2008). Common diseases of pangasius catfish farmed in Vietnam. Global Seafood Alliance.<https://www.globalseafood.org/advocate/common-diseases-of-pangasius-catfish-farmed-in-vietnam/>
+
+Egerton, S., Culloty, S., Whooley, J., Stanton, C., & Ross, R. P. (2018). The gut microbiota of marine fish. Frontiers in Microbiology, Article 873.<https://doi.org/10.3389/fmicb.2018.00873>
+
+Falkowski, P. G., Fenchel, T., & Delong, E. F. (2008). The microbial engines that drive Earth’s biogeochemical cycles. Science, 320(5879), 1034–1039. <https://doi.org/10.1126/science.1153213>
+
+Food and Agriculture Organization of the United Nations. (2010). Cultured aquatic species information programme: Pangasianodon hypophthalmus. FAO.
+
+Food and Agriculture Organization of the United Nations. (2018). The state of world fisheries and aquaculture 2018: Meeting the Sustainable Development Goals. FAO.
+
+Food and Agriculture Organization of the United Nations. (2022). The state of world fisheries and aquaculture 2022: Towards blue transformation. FAO. <https://doi.org/10.4060/cc0461en>
+
+Food and Agriculture Organization of the United Nations. (2025). Quarterly pangasius analysis - October 2025. FAO.
+
+Food and Agriculture Organization of the United Nations. (n.d.). Global fisheries and aquaculture production reaches a new record high. FAO.
+
+Giang, H. T., Ut, V. N., & Phuong, N. T. (2008). Study on water quality of intensive catfish culture (Pangasianodon hypophthalmus) ponds in An Giang province. Can Tho University Journal of Science, 1-9.
+
+Gilbert, J. A., Quinn, R. A., Debelius, J., Xu, Z. Z., Morton, J., Garg, N., Jansson, J. K., Dorrestein, P. C., & Knight, R. (2016). Microbiome-wide association studies link dynamic microbial consortia to disease. Nature, 535(7610), 94–103. <https://doi.org/10.1038/nature18850>
+
+Haider, M. N., Islam, M. M., Mukit, M. A., & Uddin, M. N. (2022). Viable bacterial counts of the Pangasius catfish (Pangasianodon hypophthalmus), their responses to seasonal variations of physicochemical parameters, and bacterial counts of the cultured ponds. Journal of Advanced Veterinary and Animal Research, 9(4), 702-711. <https://doi.org/10.5455/javar.2022.i610>
+
+Huyen, L. N., & Oanh, D. T. H. (2019). Histopathological characteristics of bacillary necrosis disease in striped catfish (Pangasianodon hypophthalmus) and red tilapia (Oreochromis sp.). Can Tho University Journal of Science, 55(4), 90–96. <https://doi.org/10.22144/ctu.jvn.2019.112>
+
+Islam, M. A., Uddin, M. H., Uddin, M. J., & Shahjahan, M. (2019). Temperature changes influenced the growth performance and physiological functions of Thai pangas (Pangasianodon hypophthalmus). Aquaculture Reports, 13, Article 100179. <https://doi.org/10.1016/j.aqrep.2019.100179>
+
+Khotimah, K., Harmilia, E. D., & Sari, R. (2016). Probiotic application in the maintenance media of catfish (Pangasius hypophthalmus) seed in aquarium systems. Indonesian Swamp Aquaculture Journal, 4(2), 152–158.
+
+Kumar, S., Das, B. K., Swain, R., Chowdhury, S., & Behera, S. (2022). Outbreak of Ichthyophthirius multifiliis associated with Aeromonas hydrophila in Pangasianodon hypophthalmus: The role of co-infection and immune response. Journal of Aquatic Animal Health, 34(5), Article e12345. <https://doi.org/10.1002/aah.10123>
+
+Lederberg, J., & McCray, A. T. (2001). ‘Ome sweet ’omics-A genealogical treasury of words. The Scientist, 15(7), 8.
+Mahmud, N. S., Mansor, N. N., Abdullah, S. Z., Jalal, K. C. A., Rimatulhana, R., & Amal, M. N. (2019). Assessment of bacteria and water quality parameters in cage-cultured Pangasius hypophthalmus in Temerloh, Pahang River, Malaysia. Nature Environment and Pollution Technology, 18(5), 1479–1483.
+
+Marchesi, J. R., & Ravel, J. (2015). The vocabulary of microbiome research. Microbiome, 3, Article 31. <https://doi.org/10.1186/s40168-015-0094-5>
+
+Martins, C. I. M., Eding, E. H., Verdegem, M. C. J., Heinsbroek, L. T. N., Schneider, O., Blancheton, J. P., d’Orbcastel, E. R., & Verreth, J. A. J. (2010). New developments in recirculating aquaculture systems in Europe: A perspective on environmental sustainability. Aquacultural Engineering, 43(3), 83–93. <https://doi.org/10.1016/j.aquaeng.2010.09.002>
+
+McMurtrie, J., Alathari, S., Chaput, D. L., Bass, D., Ghambi, C., Nagoli, J., Delamare-Deboutteville, J., Mohan, C. V., Cable, J., Temperton, B., & Tyler, C. R. (2022). Relationships between pond water and tilapia skin microbiomes in aquaculture ponds in Malawi. Aquaculture, 558, Article 738367. <https://doi.org/10.1016/j.aquaculture.2022.738367>
+
+Moriarty, D. J. W. (1997). The role of microorganisms in aquaculture ponds. Aquaculture, 151(1–4), 333–349. <https://doi.org/10.1016/S0044-8486(96)01487-1>
+
+Nayak, S. K. (2010). Role of gastrointestinal microbiota in fish. Aquaculture Research, 41(11), 1553–1573. <https://doi.org/10.1111/j.1365-2109.2010.02546.x>
+
+Nguyen, H. T., Pham, T. L., Tran, T. M., & Le, V. T. (2020). Pilot-scale recirculating aquaculture system for striped catfish (Pangasianodon hypophthalmus). Vietnam Journal of Aquaculture Science, 5, 45–55.
+
+Noga, E. J. (2010). Fish disease: Diagnosis and treatment (2nd ed.). Wiley-Blackwell.
+Paerl, H. W., & Otten, T. G. (2013). Harmful cyanobacterial blooms: Causes, consequences, and controls. Microbial Ecology, 65(4), 995–1010. <https://doi.org/10.1007/s00248-012-0159-y>
+
+Perry, W. B., Lindsay, E., Payne, C. J., Brodie, C., & Kazlauskaite, R. (2020). The role of the gut microbiome in sustainable teleost aquaculture. Proceedings of the Royal Society B: Biological Sciences, 287(1926), 20200184. <https://doi.org/10.1098/rspb.2020.0184>
+
+Phuong, N. T., & Oanh, D. T. H. (2010). Water quality management in intensive pangasius ponds in the Mekong Delta, Vietnam. Aquaculture Research, 41(11), 1605-1614. <https://doi.org/10.1111/j.1365-2109.2009.02456.x>
+
+Pokhrel, S., & Oanh, D. T. H. (2021). Investigation on common diseases of striped catfish (Pangasianodon hypophthalmus) farms in An Giang province and Can Tho city of the Mekong Delta, Vietnam. International Journal of Fisheries and Aquatic Studies, 9(2), 110–116.
+
+Prosser, J. I. (1989). Autotrophic nitrification in bacteria. Advances in Microbial Physiology, 30, 125–181. <https://doi.org/10.1016/S0065-2911(08)60112-5>
+
+Ravindra, Kumar, R., Ahmad, N., Verma, D. K., Kantharajan, G., Kumar, C. B., Paria, A., Swaminathan, T. R., Rathore, G., Sood, N., Pradhan, P. K., & Lal, K. K. (2022). Mortalities in cultured Pangasianodon hypophthalmus due to oomycete Saprolegnia parasitica infection in Uttar Pradesh, India. Aquaculture Reports, 23, Article 101047. <https://doi.org/10.1016/j.aqrep.2022.101047>
+
+Ringø, E., Zhou, Z., Vecino, J. L. G., Wadsworth, S., Romero, J., Krogdahl, Å., Olsen, R. E., Dimitroglou, A., Foey, A., Davies, S., Owen, M., Lauzon, H. L., Martinsen, L. L., De Schryver, P., Bossier, P., Sperstad, S., Merrifield, D. L., & Fjellheim, A. J. (2016). Effect of dietary components on the gut microbiota of aquatic animals: A never-ending story? Aquaculture Nutrition, 22(2), 219–282. <https://doi.org/10.1111/anu.12346>
+
+Sarker, J., & Faruk, M. A. R. (2016). Experimental infection of Aeromonas hydrophila in pangasius. Progressive Agriculture, 27(3), 392–399. <https://doi.org/10.3329/pa.v27i3.30836>
+
+Schreier, H. J., Mirzoyan, N., & Saito, K. (2010). Microbial diversity of biological filters in recirculating aquaculture systems. Current Opinion in Biotechnology, 21(3), 318–325. <https://doi.org/10.1016/j.copbio.2010.03.011>
+
+Shade, A., Peter, H., Allison, S. D., Baho, D. L., Berga, M., Bürgmann, H., Huber, D. H., Langenheder, S., Lennon, J. T., Martiny, J. B. H., Matulich, K. L., Schmidt, T. M., & Handelsman, J. (2012). Fundamentals of microbial community resistance and resilience. Frontiers in Microbiology, 3, 417. <https://doi.org/10.3389/fmicb.2012.00417>
+
+Shinn, A. P., Pratoomyot, J., Griffiths, D., Trong, T. Q., Vu, N. T., Jiravanichpaisal, P., & Briggs, M. (2018). Asian shrimp production and the economic costs of disease. Asian Fisheries Science, 31(S1), 29–58. <https://doi.org/10.33997/j.afs.2018.31.S1.003>
+
+Stentiford, G. D., Sritunyalucksana, K., Flegel, T. W., Williams, B. A. P., Withyachumnarnkul, B., Itsathitphaisarn, O., & Bass, D. (2017). New paradigms to help solve the global aquaculture disease crisis. PLOS Pathogens, 13(2), Article e1006160. <https://doi.org/10.1371/journal.ppat.1006160>
+
+Suriyadin, A., Utari, H. B., & Rahardjo, S. (2020). Water quality analysis and microbiota of catfish pond (Pangasianodon hypophthalmus) applied by photosynthetic bacteria (Rhodobacter sp. and Rhodococcus sp.). Aquacultura Indonesiana, 21(2), 56–66.
+
+Thompson, L. R., et al. (2017). A communal catalogue reveals Earth’s multiscale microbial diversity. Nature, 551, 457–463. <https://doi.org/10.1038/nature24621>
+
+Thy, Đ. T. M., Tuyết Hoa, T. T. T., Hằng, N. T. T., Phương, N. T., & Duyên, T. T. M. (2020). The species composition of filamentous fungi infecting fry to fingerlings of striped catfish (Pangasianodon hypophthalmus). Tạp chí Khoa học Đại học Cần Thơ, 56(6), 218–226. <https://doi.org/10.22144/ctu.jvn.2020.161>
+
+Tien, N. T., Dung, T. T., Tuan, N. A., & Crumlish, M. (2012). First identification of Flavobacterium columnare infection in farmed freshwater striped catfish (Pangasianodon hypophthalmus). Diseases of Aquatic Organisms, 100(1), 83–88. <https://doi.org/10.3354/dao02478>
+
+Tilia, M. B., Sonnenschein, E. C., & Gram, L. (2016). Monitoring and managing microbes in aquaculture: Towards a sustainable industry. Microbial Biotechnology, 9(5), 576–584. <https://doi.org/10.1111/1751-7915.12392>
+
+Truong, Q. P., Nguyen, K. N., Phan, T. C. T., Nguyen, T. K. L., Vu, N. U., & Huynh, T. G. (2022). Bacterial population in intensive striped catfish (Pangasianodon hypophthalmus) ponds. Aquaculture Reports, 22, Article 100980. <https://doi.org/10.1016/j.aqrep.2022.100980>
+
+Uddin, M. N., & Al-Harbi, A. H. (2004). Seasonal variation of bacterial flora in ponds in Saudi Arabia used for tilapia aquaculture. Journal of Applied Aquaculture, 16(1), 53–61. <https://doi.org/10.1300/J028v16n01_04>
+
+Ut, V. N., Giang, H. T., Phu, T. Q., Morales, J., & Phuong, N. T. (2016). Assessment of water quality in catfish (Pangasianodon hypophthalmus) production systems in the Mekong Delta. Can Tho University Journal of Science, 3, 71–78.
+
+Verschuere, L., Rombaut, G., Sorgeloos, P., & Verstraete, W. (2000). Probiotic bacteria as biological control agents in aquaculture. Microbiology and Molecular Biology Reviews, 64(4), 655–671. <https://doi.org/10.1128/MMBR.64.4.655-671.2000>
+
+Vietnam Association of Seafood Exporters and Producers. (2024). Pangasius export turnover in the first 10 months of 2024 reached 1.56 billion USD. Vietnam.vn.
+
+Vietnam Association of Seafood Exporters and Producers. (2025). Pangasius exports target billion in 2025. Vietnam.vn.
+
+Vietnam Association of Seafood Exporters and Producers. (n.d.). Pangasius exports surpass 2 billion USD in the first 11 months. Vietnam.vn.
+
+Wang, C., Chuprom, J., Wang, Y., & Fu, L. (2019). Beneficial bacteria for aquaculture: Nutrition, bacteriostasis and immunoregulation. Journal of Applied Microbiology, 128(1), 28–40. <https://doi.org/10.1111/jam.14383>
+
+Zeng, A., Tan, K., Gong, P., Lei, P., Guo, Z., Wang, S., et al. (2020). Correlation of microbiota in the gut of fish species and water. 3 Biotech, 10, 472. <https://doi.org/10.1007/s13205-020-02461-5>
+
+Zeng, Y., Ma, Y., Wei, C., Jiao, N., Tang, K., Wu, Z., & Jian, J. (2010). Bacterial diversity in various coastal mariculture ponds in Southeast China and in diseased eels as revealed by culture and culture-independent molecular techniques. Aquaculture Research, 41, 172–186. <https://doi.org/10.1111/j.1365-2109.2009.02307.x>
+
+Zhao, Z., Zou, Q., Han, S., Shi, J., Yan, H., Hu, D., & Yi, Y. (2023). Omics analysis revealed the possible mechanism of streptococcus disease outbreak in tilapia under high temperature. Fish & Shellfish Immunology, 134, 108639. <https://doi.org/10.1016/j.fsi.2023.108639>
 
