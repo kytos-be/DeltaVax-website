@@ -11,8 +11,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: About
+      - href: overview.qmd
+        text: Overview
       - href: systems.qmd
         text: Aquaculture Systems
       - href: microbiomes.qmd
@@ -21,8 +21,8 @@ website:
         text: Diseases
       - href: management.qmd
         text: Management
-      - href: data.qmd
-        text: Data
+      # - href: data.qmd
+      #   text: Data
       - href: references.qmd
         text: References
 

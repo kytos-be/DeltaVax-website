@@ -12,6 +12,8 @@ format:
     css: styles.css
 ---
 # Microbial diseases in pangasius
+![](images/dis.jpg){fig-align="center" width=100% height=350px style="border-radius:12px;"}
+
 ::: text-justify
 The most common bacterial diseases of striped catfish are hemorrhagic disease caused by Aeromonas hydrophila and bacillary necrosis of Pangasius (BNP) caused by Edwardsiella ictaluri (Dung et al 2008; Pokhrel & Oanh 2021). At the genus level, Aeromonas and Edwardsiella were detected in the sediment, but their relative abundances were low in water (0.032 and 0.073% of the total reads, respectively). Aeromonas had 0.45% relative abundance in the sediment. Another pathogen, Flavobacterium columnare, had a relative abundance of 1.02% in the pond water and 0.1% in sediment. This pathogen is the aetiological agent causing white patch disease in farmed catfish P. hypophthalmus fingerlings, leading to high mortality rates in commercial hatcheries and ponds in the Mekong Delta. Unfortunately, the OTUs at species level of these pathogenic bacteria were unassigned in this study (Truong et al., 2022).
 :::

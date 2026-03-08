@@ -14,6 +14,8 @@ format:
 
 # What factors affect microbial health in pangasius culture systems?
 
+![](images/fishhh.jpg){fig-align="center" width=100% height=350px style="border-radius:12px;"}
+
 ::: text-justify
 The study by Debnath et al. 2025 investigated the seasonal dynamics and environmental drivers shaping microbiome composition in freshwater finfish earthen aquaculture ponds in Bangladesh. The results demonstrated that seasonal variation was the primary factor influencing microbial community structure, with clear differences observed between the dry and wet seasons. The pondwater microbial diversity was at its lowest in winter (and/or in monsoon) and highest in the pre monsoon period. The microbial community structures differed across the different seasons, geographical locations, culture systems, and crop species, with season and geographical locations showing the strongest effects. Of the water physicochemistry features assessed, temperature and pH were found to have a weak but significant effect on the water microbiome content for both pangasius and tilapia ponds. These temporal changes significantly affected both microbial diversity and community composition in pond water and bottom sediments.
 
@@ -28,8 +30,6 @@ Haider et al. (2022) the study further examined seasonal variations in bacterial
 Suriyadin et al. (2020) evaluated the effects of supplementing photosynthetic bacteria (*Rhodobacter* sp. and *Rhodococcus* sp.) on water quality and microbial communities in ponds culturing striped catfish (*Pangasianodon hypophthalmus*). The results demonstrated that the application of photosynthetic bacteria significantly improved key water quality parameters, particularly by reducing nitrite (NO₂⁻), total ammonia nitrogen (TAN), and total organic matter (TOM) concentrations. In addition, notable shifts in the phytoplankton community were observed, with a marked decline in the abundance of cyanobacteria (Cyanophyta), including *Anabaena*, *Merismopedia*, *Chroococcus*, and *Oscillatoria*, thereby mitigating the risk of harmful algal blooms. From a microbiological perspective, the relative abundance of pathogenic *Aeromonas* spp. decreased in relation to the total bacterial population. Overall, the application of *Rhodobacter* and *Rhodococcus* not only enhanced pond water quality but also contributed to the stabilization of microbial communities, reducing pathogen pressure and improving health management in pangasius aquaculture systems (Suriyadin et al., 2020).
 
 :::
-
-![](images/deltavaxteam.jpg)
 
 ## Microbiome management in aquaculture using KYTOS technology
 :::{.text-justify}

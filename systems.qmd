@@ -12,9 +12,11 @@ format:
     css: styles.css
 ---
 
-# Pangasius farming systems: An overview
+# Pangasius Farming: The Rise of Intensive Aquaculture
 
-::: text-justify
+![](images/aqua.png){fig-align="center" width=100% height=350px style="border-radius:12px;"}
+
+:::{.text-justify}
 Pangasius catfish (Pangasianodon hypophthalmus) is predominantly cultured in intensive monoculture systems, particularly in the Mekong Delta of Vietnam, which is the global center of pangasius production. Over the past decades, pangasius farming has shifted from semi intensive pond culture to highly intensive production systems characterized by high stocking densities, formulated feed use, and active water management. Traditional earthen ponds remain the most common farming structure, typically ranging from 0.5 to 5 hectares in size with water depths of 3-5 meters. These ponds are often connected to river systems to facilitate water exchange, however, this practice has gradually declined due to growing concerns regarding environmental impacts and biosecurity risks.
 
 In intensive systems, pangasius is stocked at high densities, often exceeding 30-60 fish per square meter, and relies almost entirely on commercial pelleted feed. While this approach maximizes productivity, it also results in substantial organic waste accumulation from uneaten feed and fish excreta, which can significantly alter water quality and microbial dynamics within the culture environment. As a result, water management practices such as partial water exchange, aeration, and sediment removal are critical components of modern pangasius farming.

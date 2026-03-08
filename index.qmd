@@ -36,6 +36,8 @@ Pangasius Aquaculture Systems
 ### ***DeltaVax: Transforming the Mekong Delta Pangasius Chain***
 
 DeltaVax is an innovative initiative designed to strengthen and transform the pangasius value chain as well as the broader aquaculture sector in the Mekong Delta, Vietnam. The project is funded by the Impact Clusters subsidy scheme of the Netherlands, which supports private-sector development in developing countries. Through this program, companies, research institutes, trade organizations, and NGOs collaborate in a consortium to share knowledge, expertise, and technology, aiming to promote inclusive economic growth, sustainable aquaculture practices, and improved working standards across the sector.
+
+![](images/deltavaxteam.jpg)
 :::
 
 :::{.text-justify}
@@ -69,9 +71,17 @@ Improving vaccination practices in the aquaculture sector in order to reduce dis
 ## <span style="color:#f5a000;"><strong> About KYTOS</strong></span>
 
 **KYTOS** is a pioneering microbiome technology company that develops advanced solutions for microbial community management across multiple sectors, including aquaculture and agriculture. KYTOS applies modern flow cytometry technology to analyze and monitor microorganisms at the single cell level. This technology enables the rapid scanning of hundreds of thousands of microbial cells within minutes, using fluorescent staining techniques to generate a comprehensive quantitative profile of microbial load, diversity, and key microbial health indicators. Within the framework of the DeltaVax project, KYTOS is involved in monitoring the dynamics of microbial communities in pangasius recirculating aquaculture systems (RAS).
+:::
+:::{layout-ncol="2"}
+
+![KYTOS Team](images/kytosteam.jpg){width="100%"}
+
+![KYTOS Interns](images/labkytos.jpg){width="100%"}
+
+:::
 
 ## Website Objectives
-
+:::{.text-justify}
 This website developed by KYTOS, is designed as a specialized knowledge repository designed to provide reliable information on the pangasius aquaculture sector in Vietnam. Its primary objective is to compile scientific literature, research findings, and practical knowledge into a comprehensive platform that enables readers to gain a clear understanding of the industry’s current status, development trends, challenges, and opportunities. The content is presented in an academic yet accessible manner, making it suitable for a wide audience, including researchers, students, technical specialists, industry stakeholders, and farmers.
 
 The platform places particular emphasis on A Review of Microbiomes in Pangasius Aquaculture Systems, highlighting the critical role of microbial communities in determining water quality, animal health, and the sustainability of production systems. It helps users understand the interactions between microorganisms, pond environments, and production performance, thereby promoting the application of scientific knowledge in practice, improving technical standards, and supporting the industry’s development toward sustainability, biosecurity, and environmental responsibility.
