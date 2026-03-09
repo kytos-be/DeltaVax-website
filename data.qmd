@@ -27,9 +27,13 @@ Within the framework of this project, KYTOS was responsible for monitoring micro
 ### Microbial parameters assessed via the Kytos monitoring system
 ::: hero
   <div class="grid" style="display:grid; grid-template-columns:1fr 1fr; gap:30px;">
-
-<div>
+  <div>
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(ggplot2)
+library(tidyr)
+library(scales)
+
 data_bac <- data.frame(
   Date = as.Date(c("2025-05-26",
                    "2025-06-02",
@@ -81,10 +85,6 @@ ggplot(data_bac, aes(x = Date, y = Bacterial_load, color = System, group = Syste
 
 <div>
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-
-library(ggplot2)
-library(tidyr)
-library(scales)
 
 data_pro <- data.frame(
   Date = as.Date(c("2025-05-26",
