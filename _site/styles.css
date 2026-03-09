@@ -1,1 +1,78 @@
 /* css styles */
+
+
+
+
+/*=====  change color of navbar and text ===== */
+
+/* Fist link */
+.navbar .nav-link {
+  padding: 6px 16px;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+/* hover */
+.navbar .nav-link:hover {
+  background-color: rgba(255, 165, 0, 0.2);
+}
+
+/*active */
+.navbar .nav-link.active {
+  background-color: #f5a000 !important;
+  color: white !important;
+  border-radius: 25px;
+}
+
+/*=====  all page ===== */
+.text-justify {
+  text-align: justify;
+}
+
+/* ===== TOC FULL OVERRIDE ===== */
+
+#TOC a {
+  color: #000 !important;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* Hover */
+#TOC a:hover {
+  color: #f5a000 !important;
+}
+
+/* Active link */
+#TOC a.active,
+#TOC .active > a,
+#TOC a.toc-active {
+  color: #f5a000 !important;
+  font-weight: 600;
+}
+
+/* Border-left */
+#TOC .active {
+  border-left: 3px solid #f5a000 !important;
+}
+
+/* remove blue color bootstrap */
+:root {
+  --bs-link-color: #000;
+  --bs-link-hover-color: #f5a000;
+}
+
+/* TOC Title */
+#TOC > h2 {
+  font-size: 1.3rem;      
+  font-weight: 700;       
+  color: #000;           
+  margin-bottom: 1rem;
+}
+
+/* ===== about page ===== */
+.page-columns {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
