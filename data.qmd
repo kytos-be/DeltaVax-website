@@ -29,7 +29,57 @@ Within the framework of this project, KYTOS was responsible for monitoring micro
   <div class="grid" style="display:grid; grid-template-columns:1fr 1fr; gap:30px;">
 
 <div>
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+data_bac <- data.frame(
+  Date = as.Date(c("2025-05-26",
+                   "2025-06-02",
+                   "2025-06-09",
+                   "2025-06-16",
+                   "2025-06-23")),
 
+  Delta_Ras1 = c(1631253, 1007920, 1087307, 888693, 1134160),
+  Delta_Ras2 = c(977787, 594213, 738453, 1538160, 1163533),
+  Delte_Ras3 = c(723573, 1524507, 749253, 802853, 1242587),
+  Mini_Ras   = c(689680, 640400, 522000, 468347, 303813)
+)
+data_bac <- pivot_longer(data_bac,
+                         cols = -Date,
+                         names_to = "System",
+                         values_to = "Bacterial_load")
+
+ggplot(data_bac, aes(x = Date, y = Bacterial_load, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Bacterial load",
+    x = NULL,
+    y = "Bacterial load (%)",
+    color = NULL
+  ) +
+  scale_y_continuous(limits = c(0, 1800000), breaks = seq(0, 1800000, 200000)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+
+
+```
+</div>
+
+<div>
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
 library(ggplot2)
@@ -86,57 +136,6 @@ ggplot(data_pro, aes(x = Date, y = Productivity, color = System, group = System)
     axis.ticks = element_line(color = "black", linewidth = 0.3),
     plot.margin = margin(10, 15, 10, 10)
   )
-
-```
-</div>
-
-<div>
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-data_bac <- data.frame(
-  Date = as.Date(c("2025-05-26",
-                   "2025-06-02",
-                   "2025-06-09",
-                   "2025-06-16",
-                   "2025-06-23")),
-
-  Delta_Ras1 = c(1631253, 1007920, 1087307, 888693, 1134160),
-  Delta_Ras2 = c(977787, 594213, 738453, 1538160, 1163533),
-  Delte_Ras3 = c(723573, 1524507, 749253, 802853, 1242587),
-  Mini_Ras   = c(689680, 640400, 522000, 468347, 303813)
-)
-data_bac <- pivot_longer(data_bac,
-                         cols = -Date,
-                         names_to = "System",
-                         values_to = "Bacterial_load")
-
-ggplot(data_bac, aes(x = Date, y = Bacterial_load, color = System, group = System)) +
-  geom_line(linewidth = 1.2, lineend = "round") +
-  geom_point(size = 2.8) +
-  labs(
-    title = "Bacterial load",
-    x = NULL,
-    y = "Bacterial load (%)",
-    color = NULL
-  ) +
-  scale_y_continuous(limits = c(0, 1800000), breaks = seq(0, 1800000, 200000)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
-  theme_minimal(base_size = 13) +
-  theme(
-    plot.title = element_text(face = "bold", size = 16, hjust = 0),
-    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
-    axis.text = element_text(color = "black"),
-    axis.text.x = element_text(margin = margin(t = 6)),
-    legend.position = "bottom",
-    legend.justification = "left",
-    legend.text = element_text(size = 11),
-    panel.grid.minor = element_blank(),
-    panel.grid.major.x = element_blank(),
-    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
-    axis.line = element_line(color = "black", linewidth = 0.3),
-    axis.ticks = element_line(color = "black", linewidth = 0.3),
-    plot.margin = margin(10, 15, 10, 10)
-  )
-
 
 ```
 </div>
@@ -253,13 +252,13 @@ ggplot(data_div, aes(x = Date, y = Diversity, color = System, group = System)) +
 :::
 
 ::: {.text-justify}
-The microbial indicators showed clear differences among systems throughout the culture cycle. The Bacterial Load profile revealed marked divergence between systems. The DeltaRAS systems (1, 2, and 3) exhibited pronounced fluctuation peaks during the culture period, particularly in the mid and late stages. In contrast, MiniRAS displayed a gradual decreasing trend and maintained a lower fluctuation amplitude toward the end of the cycle. Overall, the variation in bacterial density was more stable in MiniRAS compared to the DeltaRAS systems.
-
-Regarding Diversity, all four systems showed a slight increasing trend over time without abrupt declines; however, DeltaRAS1 exhibited more pronounced temporal variability compared to DeltaRAS2 and MiniRAS.
+The microbial indicators showed clear differences among systems throughout the culture cycle. The Bacterial Load profile revealed marked divergence between systems. The DeltaRAS systems (1, 2, and 3) exhibited pronounced fluctuation peaks during the culture period, particularly in the late stages. In contrast, MiniRAS displayed a gradual decreasing trend and maintained a lower fluctuation amplitude toward the end of the cycle. Overall, the variation in bacterial density was more stable in MiniRAS compared to the DeltaRAS systems.
 
 Cell Viability tended to decrease toward the end of the culture cycle in most systems. DeltaRAS1 recorded the most evident decline, particularly in the late stage. DeltaRAS2 and DeltaRAS3 showed reductions during the mid-cycle, followed by slight recovery before stabilizing. MiniRAS exhibited a gradual decline over time without pronounced fluctuation peaks.
 
 In terms of Productivity, DeltaRAS2 maintained the most stable levels throughout the culture period, whereas DeltaRAS1 and DeltaRAS3 displayed stage-dependent variations. MiniRAS showed a decreasing trend over time, consistent with the pattern observed for Cell Viability.
+
+Regarding Diversity, all four systems showed a slight increasing trend over time without abrupt declines; however, DeltaRAS1 exhibited more pronounced temporal variability compared to DeltaRAS2 and MiniRAS.
 
 Overall, MiniRAS and DeltaRAS2 demonstrated lower microbial variability and more stable temporal dynamics, whereas DeltaRAS1 and DeltaRAS3 exhibited greater fluctuation amplitudes across multiple microbial indicators.
 :::
@@ -482,7 +481,7 @@ ggplot(data_feed4, aes(x = factor(Date), y = Gram, fill = Feed)) +
 ::: {.text-justify}
 Observation of the graphs suggests that the period when commercial feed INVE was first introduced in combination with Artemia may have contributed to changes in microbial indicators. Commercial feed contains a relatively stable protein composition and different proportions of carbohydrates and lipids compared with live artemia, which can alter the form and rate at which dissolved compounds are released into the water.
 
-The graphs show fluctuations with an increase in Bacterial Load in the DeltaRAS systems, while Diversity also tends to increase. This pattern indicates that the microbial community is responding to the introduction of a new substrate source. According to Rurangwa and Verdegem (2015), changes in feed type can modify the composition of dissolved organic compounds and metabolic by products in aquaculture systems, thereby influencing the structure of microbial communities. Allison and Martiny (2008) further suggested that when a new substrate source emerges or the nutritional spectrum changes, microbial communities tend to increase their functional diversity through niche differentiation.
+The graphs show fluctuations with an increase in Bacterial Load in the DeltaRAS systems (except Mini RAS), while Diversity also tends to increase. This pattern indicates that the microbial community is responding to the introduction of a new substrate source. According to Rurangwa and Verdegem (2015), changes in feed type can modify the composition of dissolved organic compounds and metabolic by products in aquaculture systems, thereby influencing the structure of microbial communities. Allison and Martiny (2008) further suggested that when a new substrate source emerges or the nutritional spectrum changes, microbial communities tend to increase their functional diversity through niche differentiation.
 
 In recirculating aquaculture systems (RAS), such changes may not only affect heterotrophic bacterial groups but can also indirectly influence nitrification processes in the biofilter. Differences in protein content and digestibility between Artemia and commercial feed may alter the dynamics of ammonia excretion by fish, thereby affecting the substrate supply for ammonia oxidizing bacteria (AOB). When the rate or concentration of ammonia input fluctuates, the activity of nitrifying communities within the biofilm may adjust accordingly, leading to a rebalancing between AOB and nitrite oxidizing bacteria (NOB). These adjustments may contribute to the temporary fluctuations in Bacterial Load, Cell Viability, and Productivity observed during the feed transition period.
 
@@ -596,7 +595,7 @@ In contrast, in DeltaRAS2, NO₂⁻ concentrations increased and persisted longe
 
 ### Growth performance and survival during the nursery cycle
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center'}
 
 library(ggplot2)
 library(tidyr)
