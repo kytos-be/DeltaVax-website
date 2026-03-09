@@ -57,7 +57,7 @@ ggplot(data_bac, aes(x = Date, y = Bacterial_load, color = System, group = Syste
   labs(
     title = "Bacterial load",
     x = NULL,
-    y = "Bacterial load (%)",
+    y = "Bacterial load (cell/ml)",
     color = NULL
   ) +
   scale_y_continuous(limits = c(0, 1800000), breaks = seq(0, 1800000, 200000)) +
@@ -604,12 +604,13 @@ library(dplyr)
 data_compare <- data.frame(
   System = c("Delta", "Mini"),
   Average_Weight = c(0.264, 0.32),
-  SGR = c(17.44, 18.00)
+  SGR = c(17.44, 18.00),
+  Survival_Rate = c(7.89,	17.93)
 )
 
 data_long <- data_compare %>%
   pivot_longer(
-    cols = c(Average_Weight, SGR),
+    cols = c(Average_Weight, SGR, Survival_Rate),
     names_to = "Metric",
     values_to = "Value"
   ) %>%
@@ -617,7 +618,8 @@ data_long <- data_compare %>%
     Metric = recode(
       Metric,
       Average_Weight = "Average weight (g)",
-      SGR = "SGR (%)"
+      SGR = "SGR (%)",
+      Survival_Rate = "SR (%)"
     )
   )
 
@@ -656,4 +658,28 @@ Although no regression analysis or modeling has been conducted to verify a direc
 The results indicate differences in microbial dynamics among the RAS systems, which were characterized by varying levels of environmental stability and organic loading. Indicators such as Bacterial Load, Cell Viability, Diversity, and Productivity clearly reflected the biological fluctuations occurring within the systems throughout the culture cycle. Variations in these indicators may correspond with changes in feeding regimes as well as environmental factors such as NH₃ and NO₂⁻.
 
 Simultaneous monitoring of microbial indicators can provide complementary information for system management, particularly for optimizing feeding strategies and controlling organic loading. Integrating microbial monitoring into operational practices therefore has the potential to enhance the stability and performance of RAS systems in aquaculture applications.
+:::
+
+:::hero
+  <div style="
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  gap:30px;
+    flex-wrap:wrap;
+margin-top:30px;
+">
+<img src="images/kytos-logo.png" style="height:55px;">
+
+<img src="images/PHARMAQ_logo.png" style="height:40px;">
+
+<img src="images/Apha_logo.png" style="height:60px;">
+
+<img src="images/deheus-logo.png" style="height:120px;">
+
+<img src="images/CTU_logo.png" style="height:60px;">
+
+<img src="images/FeshStudio.png" style="height:50px;">
+
+</div>
 :::
