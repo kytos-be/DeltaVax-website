@@ -32,6 +32,9 @@ Suriyadin et al. (2020) evaluated the effects of supplementing photosynthetic ba
 :::
 
 ## Microbiome management in aquaculture using KYTOS technology
+
+![](images/kytostech.jpg){width="95%"}
+
 :::{.text-justify}
 KYTOS technology applies a flow cytometry based approach to microbiome monitoring and management in aquaculture systems. This method enables the rapid, single cell analysis of complex microbial communities. Unlike conventional microbiological techniques, which typically focus on culturable fractions or specific target organisms, flow cytometry allows the simultaneous detection and characterization of all microbial entities present in a sample, including bacteria, microalgae, fungal spores, and other microbial particles.
 
@@ -46,7 +49,6 @@ By synthesizing current knowledge on microbiome diversity, microbial diseases, a
 Microbiome based management technologie such as KYTOS provide a promising pathway for translating scientific insights into practical farm level applications. The integration of such tools within broader initiatives like the DELTAVAX project underscores the growing recognition that fish health management must be ecosystem oriented, preventive, and data driven. This review therefore serves as a scientific foundation supporting ongoing efforts to improve pangasius health management, reduce antibiotic dependence, and enhance the resilience of aquaculture systems in the Mekong Delta.
 
 :::
-![](images/kytostech.jpg)
 
 :::hero
   <div style="
@@ -58,10 +60,15 @@ Microbiome based management technologie such as KYTOS provide a promising pathwa
 margin-top:30px;
 ">
 <img src="images/kytos-logo.png" style="height:55px;">
+
 <img src="images/PHARMAQ_logo.png" style="height:40px;">
+
 <img src="images/Apha_logo.png" style="height:60px;">
+
 <img src="images/deheus-logo.png" style="height:120px;">
+
 <img src="images/CTU_logo.png" style="height:60px;">
+
 <img src="images/FeshStudio.png" style="height:50px;">
 
 </div>

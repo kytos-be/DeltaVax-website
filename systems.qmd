@@ -89,10 +89,15 @@ margin-top:30px;
 ">
 
 <img src="images/kytos-logo.png" style="height:55px;">
+
 <img src="images/PHARMAQ_logo.png" style="height:40px;">
+
 <img src="images/Apha_logo.png" style="height:60px;">
+
 <img src="images/deheus-logo.png" style="height:120px;">
+
 <img src="images/CTU_logo.png" style="height:60px;">
+
 <img src="images/FeshStudio.png" style="height:50px;">
 
 </div>
