@@ -34,6 +34,7 @@ Within the framework of this project, KYTOS was responsible for monitoring micro
 
 library(ggplot2)
 library(tidyr)
+library(scales)
 
 data_pro <- data.frame(
   Date = as.Date(c("2025-05-26",
@@ -53,22 +54,37 @@ data_pro <- pivot_longer(data_pro,
                           names_to = "System",
                           values_to = "Productivity")
 
-ggplot(data_pro, aes(x = Date, y = Productivity, color = System)) +
-  geom_line(linewidth = 1) +
-  geom_point(size = 2) +
-  labs(title = expression(bold("Productivity")),
-       y = "(%)",
-       x = "",
-       color = NULL) +
-  scale_y_continuous(limits = c(0, 80), breaks = seq(0, 80, 10)) +
-  theme_minimal(base_size = 14) +
+
+ggplot(data_pro, aes(x = Date, y = Productivity, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Productivity",
+    x = NULL,
+    y = "Productivity (%)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+    limits = c(0, 80),
+    breaks = seq(0, 80, 10),
+    labels = label_number(suffix = "%")
+  ) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
   theme(
-    plot.title = element_text(face="bold", size=18),
-    axis.text = element_text(color = "black", size = 12),
-    axis.title = element_text(face="bold"),
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
     legend.position = "bottom",
-    legend.title = element_text(face="bold"),
-    panel.grid.major = element_blank()
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
   )
 
 ```
@@ -76,7 +92,6 @@ ggplot(data_pro, aes(x = Date, y = Productivity, color = System)) +
 
 <div>
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-
 data_bac <- data.frame(
   Date = as.Date(c("2025-05-26",
                    "2025-06-02",
@@ -94,22 +109,34 @@ data_bac <- pivot_longer(data_bac,
                          names_to = "System",
                          values_to = "Bacterial_load")
 
-ggplot(data_bac, aes(x = Date, y = Bacterial_load, color = System)) +
-  geom_line(linewidth = 1) +
-  geom_point(size = 2) +
-  labs(title = expression(bold("Bacterial load")),
-       y = "(cells/mL)",
-       x = "",
-       color = NULL) +
+ggplot(data_bac, aes(x = Date, y = Bacterial_load, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Bacterial load",
+    x = NULL,
+    y = "Bacterial load (%)",
+    color = NULL
+  ) +
   scale_y_continuous(limits = c(0, 1800000), breaks = seq(0, 1800000, 200000)) +
-  theme_minimal(base_size = 14) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
   theme(
-    plot.title = element_text(face="bold", size = 18),
-    axis.text = element_text(color = "black", size = 12),
-    axis.title = element_text(face="bold"),
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
     legend.position = "bottom",
-    panel.grid.major = element_blank()
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
   )
+
 
 ```
 </div>
@@ -135,21 +162,36 @@ data_cell <- pivot_longer(data_cell,
                           names_to = "System",
                           values_to = "Cell_viability")
 
-ggplot(data_cell, aes(x = Date, y = Cell_viability, color = System)) +
-  geom_line(linewidth = 1) +
-  geom_point(size = 2) +
-  labs(title = expression(bold("Cell viability")),
-       y = "(%)",
-       x = "",
-       color = NULL) +
-  scale_y_continuous(limits = c(0, 80), breaks = seq(0, 80, 10)) +
-  theme_minimal(base_size = 14) +
+ggplot(data_cell, aes(x = Date, y = Cell_viability, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Cell viability",
+    x = NULL,
+    y = "Cell viability (%)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+    limits = c(0, 80),
+    breaks = seq(0, 80, 10),
+    labels = label_number(suffix = "%")
+  ) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
   theme(
-    plot.title = element_text(face= "bold", size = 18),
-    axis.text = element_text(color = "black", size = 12),
-    axis.title = element_text(face="bold"),
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
     legend.position = "bottom",
-    panel.grid.major = element_blank()
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
   )
 
 ```
@@ -176,22 +218,34 @@ data_div <- pivot_longer(data_div,
                          names_to = "System",
                          values_to = "Diversity")
 
-ggplot(data_div, aes(x = Date, y = Diversity, color = System)) +
-  geom_line(linewidth = 1) +
-  geom_point(size = 2) +
-  labs(title = expression(bold("Diversity")),
-       y = "",
-       x = "",
-       color = NULL) +
+ggplot(data_div, aes(x = Date, y = Diversity, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Diversity",
+    x = NULL,
+    y = "Diversity",
+    color = NULL
+  ) +
   scale_y_continuous(limits = c(0, 4000), breaks = seq(0, 4000, 500)) +
-  theme_minimal(base_size = 14) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
   theme(
-    plot.title = element_text(face= "bold", size = 18),
-    axis.text = element_text(color = "black", size = 12),
-    axis.title = element_text(face="bold"),
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
     legend.position = "bottom",
-    panel.grid.major = element_blank()
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
   )
+
 
 ```
 </div>
@@ -235,19 +289,33 @@ data_feed <- pivot_longer(data_feed,
                           names_to = "Feed",
                           values_to = "Gram")
 
-ggplot(data_feed, aes(x = Date, y = Gram, fill = Feed)) +
-  geom_bar(stat = "identity") +
-  labs(title = expression(bold("DeltaRAS 1")),
-       y = "Gram",
-       x = "",
-       fill = NULL) +
-  theme_minimal(base_size = 14) +
+ggplot(data_feed, aes(x = factor(Date), y = Gram, fill = Feed)) +
+  geom_col(
+    width = 0.8,
+    color = "white",
+    linewidth = 0.3
+  ) +
+  labs(
+    title = "DeltaRAS 1",
+    x = NULL,
+    y = "Feed (g)",
+    fill = NULL
+  ) +
+  scale_fill_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
   theme(
-    plot.title = element_text(face="bold", size = 18),
-    axis.text = element_text(color = "black", size = 12),
-    axis.title = element_text(face = "bold"),
-    legend.position = "bottom",
-    panel.grid.major = element_blank()
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(angle = 0, vjust = 0.5),
+    legend.position = "top",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line.y = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
   )
 
 ```
@@ -273,19 +341,33 @@ data_feed2 <- pivot_longer(data_feed2,
                            names_to = "Feed",
                            values_to = "Gram")
 
-ggplot(data_feed2, aes(x = Date, y = Gram, fill = Feed)) +
-  geom_bar(stat = "identity") +
-  labs(title = "DeltaRAS 2",
-       y = "Gram",
-       x = "",
-       fill = NULL) +
-  theme_minimal(base_size = 14) +
+ggplot(data_feed2, aes(x = factor(Date), y = Gram, fill = Feed)) +
+  geom_col(
+    width = 0.8,
+    color = "white",
+    linewidth = 0.3
+  ) +
+  labs(
+    title = "DeltaRAS 2",
+    x = NULL,
+    y = "Feed (g)",
+    fill = NULL
+  ) +
+  scale_fill_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
   theme(
-    plot.title = element_text(size = 18, face = "bold"),
-    axis.text = element_text(color = "black", size = 12),
-    axis.title = element_text(face = "bold"),
-    legend.position = "bottom",
-    panel.grid.major = element_blank()
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(angle = 0, vjust = 0.5),
+    legend.position = "top",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line.y = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
   )
 
 ```
@@ -311,19 +393,33 @@ data_feed3 <- pivot_longer(data_feed3,
                            names_to = "Feed",
                            values_to = "Gram")
 
-ggplot(data_feed3, aes(x = Date, y = Gram, fill = Feed)) +
-  geom_bar(stat = "identity") +
-  labs(title = "DeltaRAS 3",
-       y = "Gram",
-       x = "",
-       fill = NULL) +
-  theme_minimal(base_size = 14) +
+ggplot(data_feed3, aes(x = factor(Date), y = Gram, fill = Feed)) +
+  geom_col(
+    width = 0.8,
+    color = "white",
+    linewidth = 0.3
+  ) +
+  labs(
+    title = "DeltaRAS 3",
+    x = NULL,
+    y = "Feed (g)",
+    fill = NULL
+  ) +
+  scale_fill_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
   theme(
-    plot.title = element_text(size = 18, face = "bold"),
-    axis.text = element_text(color = "black", size = 12),
-    axis.title = element_text(face = "bold"),
-    legend.position = "bottom",
-    panel.grid.major = element_blank()
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(angle = 0, vjust = 0.5),
+    legend.position = "top",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line.y = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
   )
 
 ```
@@ -349,21 +445,34 @@ data_feed4 <- pivot_longer(data_feed4,
                            names_to = "Feed",
                            values_to = "Gram")
 
-ggplot(data_feed4, aes(x = Date, y = Gram, fill = Feed)) +
-  geom_bar(stat = "identity") +
-  labs(title = "MiniRAS",
-       y = "Gram",
-       x = "",
-       fill = NULL) +
-  theme_minimal(base_size = 14) +
+ggplot(data_feed4, aes(x = factor(Date), y = Gram, fill = Feed)) +
+  geom_col(
+    width = 0.8,
+    color = "white",
+    linewidth = 0.3
+  ) +
+  labs(
+    title = "MiniRAS",
+    x = NULL,
+    y = "Feed (g)",
+    fill = NULL
+  ) +
+  scale_fill_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
   theme(
-    plot.title = element_text(size = 18, face = "bold"),
-    axis.text = element_text(color = "black", size = 12),
-    axis.title = element_text(face = "bold"),
-    legend.position = "bottom",
-    panel.grid.major = element_blank()
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(angle = 0, vjust = 0.5),
+    legend.position = "top",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line.y = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
   )
-
 ```
 </div>
 
@@ -489,41 +598,50 @@ In contrast, in DeltaRAS2, NO₂⁻ concentrations increased and persisted longe
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+
 data_compare <- data.frame(
   System = c("Delta", "Mini"),
   Average_Weight = c(0.264, 0.32),
   SGR = c(17.44, 18.00)
 )
-ggplot(data_compare, aes(x = System)) +
-  # Average Weight
-  geom_col(aes(y = Average_Weight, fill = "Average Weight"),
-           width = 0.5) +
-  # SGR (map scale)
-  geom_col(aes(y = (SGR - 17.1) * 0.10 + 0.23,
-               fill = "SGR"),
-           width = 0.5,
-           alpha = 0.8) + 
-  scale_y_continuous(
-    name = "Gram",
-    breaks = seq(0.23, 0.33, 0.01),
-    sec.axis = sec_axis(
-      trans = ~ (.-0.23)/0.10 + 17.1,
-      name = "SGR (%)",
-      breaks = seq(17.1, 18.1, 0.1)
+
+data_long <- data_compare %>%
+  pivot_longer(
+    cols = c(Average_Weight, SGR),
+    names_to = "Metric",
+    values_to = "Value"
+  ) %>%
+  mutate(
+    Metric = recode(
+      Metric,
+      Average_Weight = "Average weight (g)",
+      SGR = "SGR (%)"
     )
-  ) +
-  coord_cartesian(ylim = c(0.23, 0.33)) +
-  scale_fill_manual(values = c("Average Weight" = "#f5a",
-                               "SGR" = "#f5a000")) +
-  labs(title = "", x = "") +
-  theme_minimal(base_size = 14) +
-  theme(
-    plot.title = element_text(size = 22, face = "bold"),
-    legend.position = "bottom",
-    legend.title = element_blank(),
-    panel.grid.major.x = element_blank()
   )
 
+ggplot(data_long, aes(x = System, y = Value, fill = System)) +
+  geom_col(width = 0.6, color = "black", linewidth = 0.4, show.legend = FALSE) +
+  geom_text(aes(label = round(Value, 2)), vjust = -0.4, size = 4) +
+  facet_wrap(~Metric, scales = "free_y") +
+  scale_fill_manual(values = KytoFlow::col_KYTOS[3:4]) +
+  labs(
+    # title = "Comparison of Delta and Mini",
+    x = NULL,
+    y = NULL
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    strip.text = element_text(face = "bold", size = 12),
+    axis.text = element_text(color = "black"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    plot.margin = margin(10, 15, 10, 10)
+  )
 ```
 
 ::: {.text-justify}

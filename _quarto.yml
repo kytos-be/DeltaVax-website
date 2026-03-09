@@ -21,8 +21,8 @@ website:
         text: Diseases
       - href: management.qmd
         text: Management
-      # - href: data.qmd
-      #   text: Data
+      - href: data.qmd
+        text: Data
       - href: references.qmd
         text: References
 
