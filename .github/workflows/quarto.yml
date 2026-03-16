@@ -20,7 +20,20 @@ jobs:
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          version: "release"
+          version: release
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: latest
+
+      - name: Install R packages
+        run: |
+          Rscript -e 'install.packages(c(
+            "knitr",
+            "rmarkdown",
+            "tidyverse"
+          ), repos="https://cloud.r-project.org")'
 
       - name: Render site
         run: quarto render
@@ -32,4 +45,5 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
+        uses: actions/deploy-pages@v4
         uses: actions/deploy-pages@v4
