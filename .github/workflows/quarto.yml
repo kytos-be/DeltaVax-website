@@ -30,7 +30,10 @@ jobs:
           Rscript -e 'install.packages(c(
             "knitr",
             "rmarkdown",
-            "tidyverse"
+            "tidyverse",
+            "scales",
+            "knitr",
+            "kableExtra"
           ), repos="https://cloud.r-project.org")'
 
       - name: Render site
