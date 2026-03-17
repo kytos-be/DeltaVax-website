@@ -27,14 +27,17 @@ jobs:
 
       - name: Install R packages
         run: |
-          Rscript -e 'install.packages(c(
-            "knitr",
-            "rmarkdown",
-            "tidyverse",
-            "scales",
-            "knitr",
-            "kableExtra"
-          ), repos="https://cloud.r-project.org")'
+            Rscript -e 'install.packages("pak", repos="https://cloud.r-project.org")'
+            Rscript -e 'pak::pkg_install(c(
+              "knitr",
+              "rmarkdown",
+              "tidyverse",
+              "scales",
+              "kableExtra"
+            ))'
+            
+      - name: Verify kableExtra
+        run: Rscript -e 'library(kableExtra); packageVersion("kableExtra")'
 
       - name: Render site
         run: quarto render
