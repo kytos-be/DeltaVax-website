@@ -6,11 +6,6 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,19 +20,26 @@ jobs:
         with:
           r-version: latest
 
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libcurl4-openssl-dev \
+            libssl-dev \
+            libxml2-dev \
+            libfontconfig1-dev \
+            libharfbuzz-dev \
+            libfribidi-dev
+
       - name: Install R packages
         run: |
-            Rscript -e 'install.packages("pak", repos="https://cloud.r-project.org")'
-            Rscript -e 'pak::pkg_install(c(
-              "knitr",
-              "rmarkdown",
-              "tidyverse",
-              "scales",
-              "kableExtra"
-            ))'
-            
-      - name: Verify kableExtra
-        run: Rscript -e 'library(kableExtra); packageVersion("kableExtra")'
+          Rscript -e 'install.packages(c(
+            "knitr",
+            "rmarkdown",
+            "tidyverse",
+            "scales",
+            "kableExtra"
+          ), repos="https://cloud.r-project.org")'
 
       - name: Render site
         run: quarto render
