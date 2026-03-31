@@ -8,30 +8,40 @@ format:
 ---
 
 ::: hero
+```{=html}
 <div style="
-    background-image:url('images/sun1.jpg');
+    position:relative;
     height:350px;
+    background-image:url('./images/sun1.jpg');
     background-size:cover;
     background-position:center;
-    border-radius:10px;">
-    
-  <div style="
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    color:white;
-    font-size:26px;
-    font-weight:bold;
-    text-align:center;
-    text-shadow:2px 2px 6px rgba(0,0,0,0.7);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
 ">
 
-A Review of Microbiomes in Pangasius Aquaculture Systems
+  <div style="
+      position:absolute;
+      inset:0;
+      background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  "></div>
+
+  <div style="
+      position:relative;
+      color:white;
+      font-size:48px;
+      font-weight:bold;
+      text-align:center;
+      padding: 0 80px;
+      line-height:1.3;
+      text-shadow:2px 4px 12px rgba(0,0,0,0.8);
+  ">
+      A Review of Microbiomes in Pangasius Aquaculture Systems
+  </div>
 
 </div>
-
-</div>
+```
 :::
 
 :::{.text-center}

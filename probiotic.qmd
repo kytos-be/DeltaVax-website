@@ -1,0 +1,85 @@
+---
+title: ""
+page-layout: full
+editor: source
+format: 
+  html:
+    css: styles.css
+---
+::: hero
+```{=html}
+<div style="
+    position:relative;
+    height:400px;
+    background-image:url('./images/probio.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+">
+
+  <div style="
+      position:absolute;
+      inset:0;
+      background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  "></div>
+
+  <div style="
+      position:relative;
+      color:white;
+      font-size:48px;
+      font-weight:700;
+      text-align:center;
+      padding: 0 80px;
+      line-height:1.3;
+      text-shadow:2px 4px 12px rgba(0,0,0,0.8);
+  ">
+      Probiotic in pangasius aquaculture: Overview
+  </div>
+
+</div>
+```
+:::
+<br>
+
+::: {.text-justify}
+
+Probiotics have been widely applied in aquaculture as a sustainable alternative to antibiotics, with numerous studies reporting their potential to improve growth performance, enhance immune responses, and improve water quality. In particular, bacterial strains belonging to the genus Bacillus are commonly used due to their ability to form spores, enabling them to withstand harsh environmental conditions and maintain biological activity. Previous studies suggest that probiotics may function through multiple mechanisms, including competition with pathogenic bacteria for nutrients, production of digestive enzymes and antimicrobial compounds, and stimulation of host immune responses (El-Saadony et al., 2021; Ringø et al., 2020).
+
+In pangasius (*Pangasianodon hypophthalmus*) aquaculture, probiotics have been associated with improved production performance. Dietary supplementation with *Bacillus* spp. has been linked to enhanced growth rate, improved feed conversion ratio (FCR), and increased digestive enzyme activity (Nguyen et al., 2024). In addition, probiotics may improve intestinal morphology, promote beneficial microbial populations, and reduce the presence of pathogenic bacteria such as *Edwardsiella ictaluri* and *Aeromonas hydrophila*, thereby potentially enhancing disease resistance (Tran et al., 2021). The use of multi strain probiotic formulations has also been reported to produce synergistic effects, further improving water quality and immune responses (Zhang et al., 2023).
+
+Beyond their direct effects on the host, probiotics play an important role in regulating and stabilizing microbial communities in aquaculture environments. Their application has been associated with enhanced biogeochemical processes, particularly nitrogen cycling, contributing to improved water quality and reduced toxicity of compounds such as ammonia and nitrite (Mang et al., 2024). Additionally, probiotic strains, especially Bacillus spp., have been shown to degrade organic matter, compete with pathogenic microorganisms, and help maintain microbial balance in aquaculture systems (El-Saadony et al., 2021; Ringø et al., 2020).
+
+However, the effectiveness of probiotics in practical aquaculture systems depends on multiple factors, including viable cell density, strain selection, and application conditions. Several studies have suggested the existence of an optimal dosage range, while excessive application may not provide additional benefits and could potentially disrupt microbial balance or increase operational costs (Putra et al., 2017). These findings highlight the importance of controlling and optimizing microbial density to ensure consistent probiotic performance.
+Previous research on probiotic fermentation has emphasized the influence of key factors such as medium composition, pH, temperature, inoculation ratio, and incubation time on microbial growth and activity. Optimization approaches, including response surface methodology (RSM), have demonstrated their effectiveness in increasing viable cell density (CFU) and improving probiotic performance (Chen et al., 2025; Xia et al., 2022). In addition, multi-strain fermentation strategies have been shown to enhance the functional properties of probiotic products (Zhang et al., 2025).
+
+Despite these advances, most studies have been conducted under controlled laboratory conditions, while limited information is available on probiotic fermentation dynamics under practical pond conditions. In particular, temporal variations in microbial density and community structure during fermentation remain insufficiently characterized. A better understanding of these dynamics is essential for improving the consistency and effectiveness of probiotic applications in aquaculture systems.
+
+Therefore, this study aims to optimize the probiotic fermentation process for pangasius aquaculture and to evaluate the temporal dynamics of microbial density and diversity during fermentation using KYTOS microbial analysis technology. The findings are expected to provide a scientific basis for improving probiotic application strategies and to support data-driven microbial management in aquaculture systems.
+:::
+
+:::hero
+  <div style="
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  gap:30px;
+    flex-wrap:wrap;
+margin-top:30px;
+">
+<img src="images/kytos-logo.png" style="height:55px;">
+
+<img src="images/PHARMAQ_logo.png" style="height:40px;">
+
+<img src="images/Apha_logo.png" style="height:60px;">
+
+<img src="images/deheus-logo.png" style="height:120px;">
+
+<img src="images/CTU_logo.png" style="height:60px;">
+
+<img src="images/FeshStudio.png" style="height:50px;">
+
+</div>
+:::

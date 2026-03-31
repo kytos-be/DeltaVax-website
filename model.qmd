@@ -1,0 +1,933 @@
+---
+title: ""
+page-layout: full
+editor: source
+format: 
+  html:
+    toc: true
+    toc-location: left
+    toc-depth: 3
+    toc-title: "On This Page"
+    smooth-scroll: true
+    css: styles.css
+---
+
+# Evaluation of a probiotic optimization model under farm conditions
+
+## Materials and Methods
+:::{.text-justify}
+The experiment was conducted at Bien Dong Seafood Company to evaluate the performance of the KYTOS probiotic fermentation optimization model under farm conditions. The probiotic product used in this study was Propond (UV-Vietnam), containing primarily *Lactobacillus* spp. at an approximate concentration of 2 × 10⁹ CFU/L.
+
+The fermentation protocol consisted of a mixture of 50 L of water, 1 L of Propond, and 3 L of molasses. Two treatments were established using pond water and filtered water as fermentation media to assess the effect of water source on microbial development. Each treatment was conducted in three independent replicates (corresponding to three fermentation batches), with a 24 hour interval between batches to ensure reproducibility. Prior to fermentation, water samples from both treatments were collected to determine the initial microbial conditions.
+
+The fermentation process lasted for five days, during which samples were collected at different time intervals to monitor microbial dynamics. Specifically, samples were collected every 2 hours during the first 12 hours, every 6 hours over the following 36 hours, and every 24 hours during the remaining three days. At each time point, 1 mL of sample was collected and preserved in fixation solution according to the KYTOS protocol.
+:::
+
+## Results
+:::{.text-justify}
+Samples collected throughout the fermentation process were analyzed using KYTOS technology to evaluate temporal changes in microbial communities. Key indicators included bacterial load, cell viability, total viable bacterial load, microbial diversity, and growth risk index. The results are presented as time series trends to illustrate the dynamics of microbial development under different fermentation conditions.
+:::
+
+### Bacterial Load (cells/mL)
+
+::: hero
+  <div class="grid" style="display:grid; grid-template-columns:1fr 1fr; gap:30px;">
+  <div>
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(scales)
+library(readxl)
+
+# Bacterial Load
+data_BD <- read_excel("~/practice/DeltaVax-website/BienDong_data/BienDong_Data.xlsx", 
+                      sheet = "Bacterial_Load")
+data_BD$Time <- trimws(as.character(data_BD$Time))
+data_BD$Time[data_BD$Time == "Before incubation"] <- "Control"
+
+  #Plotting
+    ## A1&L1
+data_plot <- data_BD %>%
+  select(Time, A1, L1) %>%   
+  pivot_longer(
+    cols = c(A1, L1),
+    names_to = "System",
+    values_to = "Bacterial_load"
+  )
+data_plot$Time <- factor(
+  data_plot$Time,
+  levels = c("Control","2H","4H","6H","8H","10H","12H",
+             "18H","24H","30H","36H","42H","48H","72H","96H","120H")
+)
+
+ggplot(data_plot, aes(x = Time, y = Bacterial_load, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Batch 1 fermentation",
+    x = NULL,
+    y = "(cells/ml)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+  labels = scales::comma,
+  breaks = seq(0, 400000000, 50000000)
+) +
+coord_cartesian(ylim = c(0, 400000000)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+```
+</div>
+<div>
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+#Plotting
+    ## A2&L2
+data_plot_2 <- data_BD %>%
+  select(Time, A2, L2) %>%  
+  pivot_longer(
+    cols = c(A2, L2),
+    names_to = "System",
+    values_to = "Bacterial_load"
+  )
+data_plot_2$Time <- factor(
+  data_plot_2$Time,
+  levels = c("Control","2H","4H","6H","8H","10H","12H",
+             "18H","24H","30H","36H","42H","48H","72H","96H","120H")
+)
+
+ggplot(data_plot_2, aes(x = Time, y = Bacterial_load, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Batch 2 fermentation ",
+    x = NULL,
+    y = "(cells/ml)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+  labels = scales::comma,
+  breaks = seq(0, 400000000, 50000000)
+) +
+coord_cartesian(ylim = c(0, 400000000)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+```
+</div>
+<div style="grid-column: 1 / span 2; display:flex; justify-content:center;">
+<div style="max-width:500px; width:100%;">
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+#Plotting
+    ## A3&L3
+data_plot_3 <- data_BD %>%
+  select(Time, A3, L3) %>%  
+  pivot_longer(
+    cols = c(A3, L3),
+    names_to = "System",
+    values_to = "Bacterial_load"
+  )
+data_plot_3$Time <- factor(
+  data_plot_3$Time,
+  levels = c("Control","2H","4H","6H","8H","10H","12H",
+             "18H","24H","30H","36H","42H","48H","72H","96H","120H")
+)
+ggplot(data_plot_3, aes(x = Time, y = Bacterial_load, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Batch 3 fermentation ",
+    x = NULL,
+    y = "(cells/ml)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+  labels = scales::comma,
+  breaks = seq(0, 400000000, 50000000)
+) +
+coord_cartesian(ylim = c(0, 400000000)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+```
+</div>
+</div>
+</div>
+:::
+
+:::{.text-justify}
+The initial bacterial load was higher in pond water compared to filtered water, reflecting the presence of an indigenous microbial community in the pond environment. This may also indicate a higher likelihood of background microbial contamination in treatments using pond water.
+
+During fermentation, bacterial load increased more rapidly in the pond water treatment during the early phase, particularly between 12 and 36 hours. However, this increase showed variability across replicates, as indicated by differences in peak timing and fluctuation patterns between fermentation batches, suggesting potential influences from environmental conditions, water quality, and initial microbial composition.
+
+In contrast, the filtered water treatment exhibited a slower increase during the initial phase but tended to show a more consistent growth pattern in later stages, indicating a potentially more controlled microbial development under reduced background conditions.
+
+To better evaluate fermentation performance, bacterial load should be interpreted alongside cell viability and total viable bacterial load, allowing differentiation between total cell increase and actual microbial activity.
+:::
+
+### Cell Viability (%)
+
+::: hero
+<div class="grid" style="display:grid; grid-template-columns:1fr 1fr; gap:30px;">
+  <div>
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+# Cell Viability
+data_cell <- read_excel("~/practice/DeltaVax-website/BienDong_data/BienDong_Data.xlsx", 
+                      sheet = "Cell_Viability")
+data_cell$Time <- trimws(as.character(data_cell$Time))
+data_cell$Time[data_cell$Time == "Before incubation"] <- "Control"
+
+  #Plotting
+    ## A1&L1
+data_plot <- data_cell %>%
+  select(Time, A1, L1) %>%   
+  pivot_longer(
+    cols = c(A1, L1),
+    names_to = "System",
+    values_to = "Cell_Viability"
+  )
+data_plot$Time <- factor(
+  data_plot$Time,
+  levels = c("Control","2H","4H","6H","8H","10H","12H",
+             "18H","24H","30H","36H","42H","48H","72H","96H","120H")
+)
+
+ggplot(data_plot, aes(x = Time, y = Cell_Viability, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Batch 1 fermentation",
+    x = NULL,
+    y = "(%)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+  labels = scales::comma,
+  breaks = seq(0, 100, 20)
+) +
+coord_cartesian(ylim = c(0, 100)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+```
+</div>
+<div>
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+#Plotting
+    ## A2&L2
+data_plot <- data_cell %>%
+  select(Time, A2, L2) %>%   
+  pivot_longer(
+    cols = c(A2, L2),
+    names_to = "System",
+    values_to = "Cell_Viability"
+  )
+data_plot$Time <- factor(
+  data_plot$Time,
+  levels = c("Control","2H","4H","6H","8H","10H","12H",
+             "18H","24H","30H","36H","42H","48H","72H","96H","120H")
+)
+
+ggplot(data_plot, aes(x = Time, y = Cell_Viability, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Batch 2 fermentation",
+    x = NULL,
+    y = "(%)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+  labels = scales::comma,
+  breaks = seq(0, 100, 20)
+) +
+coord_cartesian(ylim = c(0, 100)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+```
+</div>
+<div style="grid-column: 1 / span 2; display:flex; justify-content:center;">
+<div style="max-width:500px; width:100%;">
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+#Plotting
+    ## A3&L3
+data_plot <- data_cell %>%
+  select(Time, A3, L3) %>%   
+  pivot_longer(
+    cols = c(A3, L3),
+    names_to = "System",
+    values_to = "Cell_Viability"
+  )
+data_plot$Time <- factor(
+  data_plot$Time,
+  levels = c("Control","2H","4H","6H","8H","10H","12H",
+             "18H","24H","30H","36H","42H","48H","72H","96H","120H")
+)
+
+ggplot(data_plot, aes(x = Time, y = Cell_Viability, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Batch 3 fermentation",
+    x = NULL,
+    y = "(%)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+  labels = scales::comma,
+  breaks = seq(0, 100, 20)
+) +
+coord_cartesian(ylim = c(0, 100)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+```
+</div>
+</div>
+</div>
+:::
+:::{.text-justify}
+Cell viability differed between the two fermentation media, with lower values observed in the filtered water compared to pond water, indicating a lower initial level of active microbial populations.
+
+During fermentation, the pond water treatment maintained higher and relatively stable cell viability, particularly between 12 and 36 hours, corresponding to the active growth phase. In contrast, the filtered water treatment showed greater fluctuations in viability, suggesting less stable microbial development during the early stages.
+
+After 48 hours, both treatments exhibited a decreasing trend in cell viability, indicating a decline in microbial activity over time. Overall, the period between 24 and 36 hours appeared to represent the phase at which cell viability and microbial activity reached higher levels.
+:::
+
+### Total viable bacterial load (cells/mL)
+
+::: hero
+<div class="grid" style="display:grid; grid-template-columns:1fr 1fr; gap:30px;">
+  <div>
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+# Total Viable
+data_total <- read_excel("~/practice/DeltaVax-website/BienDong_data/BienDong_Data.xlsx", 
+                      sheet = "Total_Viable")
+data_total$Time <- trimws(as.character(data_total$Time))
+data_total$Time[data_total$Time == "Before incubation"] <- "Control"
+
+  #Plotting
+    ## A1&L1
+data_plot <- data_total %>%
+  select(Time, A1, L1) %>%   
+  pivot_longer(
+    cols = c(A1, L1),
+    names_to = "System",
+    values_to = "Total_Viable"
+  )
+data_plot$Time <- factor(
+  data_plot$Time,
+  levels = c("Control","2H","4H","6H","8H","10H","12H",
+             "18H","24H","30H","36H","42H","48H","72H","96H","120H")
+)
+
+ggplot(data_plot, aes(x = Time, y = Total_Viable, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Batch 1 fermentation",
+    x = NULL,
+    y = "(cells/ml)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+  labels = scales::comma,
+  breaks = seq(0, 350000000, 50000000)
+) +
+coord_cartesian(ylim = c(0, 350000000)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+```
+</div>
+<div>
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+#Plotting
+    ## A2&L2
+data_plot <- data_total %>%
+  select(Time, A2, L2) %>%   
+  pivot_longer(
+    cols = c(A2, L2),
+    names_to = "System",
+    values_to = "Total_Viable"
+  )
+data_plot$Time <- factor(
+  data_plot$Time,
+  levels = c("Control","2H","4H","6H","8H","10H","12H",
+             "18H","24H","30H","36H","42H","48H","72H","96H","120H")
+)
+
+ggplot(data_plot, aes(x = Time, y = Total_Viable, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Batch 2 fermentation",
+    x = NULL,
+    y = "(cells/ml)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+  labels = scales::comma,
+  breaks = seq(0, 350000000, 50000000)
+) +
+coord_cartesian(ylim = c(0, 350000000)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+```
+</div>
+<div style="grid-column: 1 / span 2; display:flex; justify-content:center;">
+<div style="max-width:500px; width:100%;">
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+#Plotting
+    ## A3&L3
+data_plot <- data_total %>%
+  select(Time, A3, L3) %>%   
+  pivot_longer(
+    cols = c(A3, L3),
+    names_to = "System",
+    values_to = "Total_Viable"
+  )
+data_plot$Time <- factor(
+  data_plot$Time,
+  levels = c("Control","2H","4H","6H","8H","10H","12H",
+             "18H","24H","30H","36H","42H","48H","72H","96H","120H")
+)
+
+ggplot(data_plot, aes(x = Time, y = Total_Viable, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Batch 3 fermentation",
+    x = NULL,
+    y = "(cells/ml)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+  labels = scales::comma,
+  breaks = seq(0, 350000000, 50000000)
+) +
+coord_cartesian(ylim = c(0, 350000000)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+```
+</div>
+</div>
+</div>
+:::
+
+:::{.text-justify}
+Total viable bacterial load, calculated as the product of total bacterial load and cell viability, provides a more representative measure of active microbial biomass during fermentation.
+
+The pond water treatment exhibited higher total viable bacterial load compared to filtered water, reflecting the combined effect of higher initial bacterial density and greater cell viability.
+
+During fermentation, total viable bacterial load increased during the early phase and reached higher values within the first 36 hours, followed by a gradual decline at later time points. An exception was observed in the third fermentation batch, where an increase was recorded after 48 hours. Overall, these trends indicate a reduction in active microbial biomass as fermentation time extended beyond the optimal growth phase.
+:::
+
+### Diversity (a.u.)
+
+::: hero
+<div class="grid" style="display:grid; grid-template-columns:1fr 1fr; gap:30px;">
+  <div>
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+# Diversity
+data_div <- read_excel("~/practice/DeltaVax-website/BienDong_data/BienDong_Data.xlsx", 
+                      sheet = "Diversity")
+data_div$Time <- trimws(as.character(data_div$Time))
+data_div$Time[data_div$Time == "Before incubation"] <- "Control"
+
+  #Plotting
+    ## A1&L1
+data_plot <- data_div %>%
+  select(Time, A1, L1) %>%   
+  pivot_longer(
+    cols = c(A1, L1),
+    names_to = "System",
+    values_to = "Diversity"
+  )
+data_plot$Time <- factor(
+  data_plot$Time,
+  levels = c("Control","2H","4H","6H","8H","10H","12H",
+             "18H","24H","30H","36H","42H","48H","72H","96H","120H")
+)
+
+ggplot(data_plot, aes(x = Time, y = Diversity, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Batch 1 fermentation",
+    x = NULL,
+    y = "(a.u.)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+  labels = scales::comma,
+  breaks = seq(0, 6000, 1000)
+) +
+coord_cartesian(ylim = c(0, 6000)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+```
+</div>
+<div>
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+#Plotting
+    ## A2&L2
+data_plot <- data_div %>%
+  select(Time, A2, L2) %>%   
+  pivot_longer(
+    cols = c(A2, L2),
+    names_to = "System",
+    values_to = "Diversity"
+  )
+data_plot$Time <- factor(
+  data_plot$Time,
+  levels = c("Control","2H","4H","6H","8H","10H","12H",
+             "18H","24H","30H","36H","42H","48H","72H","96H","120H")
+)
+
+ggplot(data_plot, aes(x = Time, y = Diversity, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Batch 2 fermentation",
+    x = NULL,
+    y = "(a.u.)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+  labels = scales::comma,
+  breaks = seq(0, 6000, 1000)
+) +
+coord_cartesian(ylim = c(0, 6000)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+```
+</div>
+<div style="grid-column: 1 / span 2; display:flex; justify-content:center;">
+<div style="max-width:500px; width:100%;">
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+#Plotting
+    ## A3&L3
+data_plot <- data_div %>%
+  select(Time, A3, L3) %>%   
+  pivot_longer(
+    cols = c(A3, L3),
+    names_to = "System",
+    values_to = "Diversity"
+  )
+data_plot$Time <- factor(
+  data_plot$Time,
+  levels = c("Control","2H","4H","6H","8H","10H","12H",
+             "18H","24H","30H","36H","42H","48H","72H","96H","120H")
+)
+
+ggplot(data_plot, aes(x = Time, y = Diversity, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Batch 3 fermentation",
+    x = NULL,
+    y = "(a.u.)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+  labels = scales::comma,
+  breaks = seq(0, 6000, 1000)
+) +
+coord_cartesian(ylim = c(0, 6000)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+```
+</div>
+</div>
+</div>
+:::
+
+:::{.text-justify}
+Microbial diversity showed a decreasing trend after approximately 18 hours of fermentation, indicating a shift toward the dominance of specific bacterial groups adapted to the fermentation conditions. This pattern was consistently observed across fermentation batches and in both treatments.
+
+The reduction in diversity, occurring alongside increasing biomass, suggests a transition of the microbial community toward a more specialized structure during the fermentation process.
+:::
+
+### Growth risk index (a.u.) 
+
+::: hero
+<div class="grid" style="display:grid; grid-template-columns:1fr 1fr; gap:30px;">
+  <div>
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+# Growth
+data_gro <- read_excel("~/practice/DeltaVax-website/BienDong_data/BienDong_Data.xlsx", 
+                      sheet = "Growth")
+data_gro$Time <- trimws(as.character(data_gro$Time))
+data_gro$Time[data_gro$Time == "Before incubation"] <- "Control"
+
+  #Plotting
+    ## A1&L1
+data_plot <- data_gro %>%
+  select(Time, A1, L1) %>%   
+  pivot_longer(
+    cols = c(A1, L1),
+    names_to = "System",
+    values_to = "Growth"
+  )
+data_plot$Time <- factor(
+  data_plot$Time,
+  levels = c("Control","2H","4H","6H","8H","10H","12H",
+             "18H","24H","30H","36H","42H","48H","72H","96H","120H")
+)
+
+ggplot(data_plot, aes(x = Time, y = Growth, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Batch 1 fermentation",
+    x = NULL,
+    y = "(a.u.)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+  labels = scales::comma,
+  breaks = seq(0, 0.6, 0.1)
+) +
+coord_cartesian(ylim = c(0, 0.6)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+```
+</div>
+<div>
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+ #Plotting
+    ## A2&L2
+data_plot <- data_gro %>%
+  select(Time, A2, L2) %>%   
+  pivot_longer(
+    cols = c(A2, L2),
+    names_to = "System",
+    values_to = "Growth"
+  )
+data_plot$Time <- factor(
+  data_plot$Time,
+  levels = c("Control","2H","4H","6H","8H","10H","12H",
+             "18H","24H","30H","36H","42H","48H","72H","96H","120H")
+)
+
+ggplot(data_plot, aes(x = Time, y = Growth, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Batch 2 fermentation",
+    x = NULL,
+    y = "(a.u.)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+  labels = scales::comma,
+  breaks = seq(0, 0.6, 0.1)
+) +
+coord_cartesian(ylim = c(0, 0.6)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+```
+</div>
+<div style="grid-column: 1 / span 2; display:flex; justify-content:center;">
+<div style="max-width:500px; width:100%;">
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+ #Plotting
+    ## A3&L3
+data_plot <- data_gro %>%
+  select(Time, A3, L3) %>%   
+  pivot_longer(
+    cols = c(A3, L3),
+    names_to = "System",
+    values_to = "Growth"
+  )
+data_plot$Time <- factor(
+  data_plot$Time,
+  levels = c("Control","2H","4H","6H","8H","10H","12H",
+             "18H","24H","30H","36H","42H","48H","72H","96H","120H")
+)
+
+ggplot(data_plot, aes(x = Time, y = Growth, color = System, group = System)) +
+  geom_line(linewidth = 1.2, lineend = "round") +
+  geom_point(size = 2.8) +
+  labs(
+    title = "Batch 3 fermentation",
+    x = NULL,
+    y = "(a.u.)",
+    color = NULL
+  ) +
+  scale_y_continuous(
+  labels = scales::comma,
+  breaks = seq(0, 0.6, 0.1)
+) +
+coord_cartesian(ylim = c(0, 0.6)) +
+  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0),
+    axis.title.y = element_text(face = "bold", margin = margin(r = 10)),
+    axis.text = element_text(color = "black"),
+    axis.text.x = element_text(margin = margin(t = 6)),
+    legend.position = "bottom",
+    legend.justification = "left",
+    legend.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "grey85", linewidth = 0.4),
+    axis.line = element_line(color = "black", linewidth = 0.3),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    plot.margin = margin(10, 15, 10, 10)
+  )
+```
+</div>
+</div>
+</div>
+:::
+
+:::{.text-justify}
+During the early stage of the fermentation process (before 18 hours), the filtered water treatment exhibited a higher proportion of large and metabolically active bacterial cells compared to pond water, suggesting a greater potential for the growth of active bacterial populations under conditions with lower initial competition.
+
+After 18 hours, this index showed a tendency to converge between the two treatments, indicating an overall increase in microbial biomass and the establishment of a more stable growth phase. This trend suggests that, following the initial adaptation phase, differences between water sources may gradually diminish as the microbial communities develop and reach a more balanced state.
+:::
+
+## Conclusion
+:::{.text-justify}
+The results suggest that differences between treatments became more apparent during the later stages of the fermentation process, likely reflecting variations in microbial responses to environmental conditions and initial community composition. In contrast, during the early stage, key indicators such as diversity, viable load, and total bacterial load showed similar trends across treatments, indicating comparable initial adaptation dynamics.
+
+The pond water treatment exhibited higher bacterial density, which may be associated with the presence of an indigenous microbial community. However, this may also imply a potential risk of introducing undesirable microorganisms.
+
+Microbial diversity tended to decrease after approximately 18 hours, suggesting the gradual dominance of bacterial groups better adapted to the fermentation conditions.
+
+From a temporal perspective, the period before 12 hours likely represents a phase of limited microbial activity. In contrast, the 24-36 hour interval corresponded to higher microbial density and activity, while a decline in cell viability was observed after 48 hours, indicating a potential reduction in microbial performance.
+
+Overall, the findings suggest that a fermentation duration of 24-36 hours may represent a favorable window, during which microbial communities exhibit relatively high density, viability, and a more stable structure.
+:::
+
+:::hero
+  <div style="
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  gap:30px;
+    flex-wrap:wrap;
+margin-top:30px;
+">
+<img src="images/kytos-logo.png" style="height:55px;">
+
+<img src="images/PHARMAQ_logo.png" style="height:40px;">
+
+<img src="images/Apha_logo.png" style="height:60px;">
+
+<img src="images/deheus-logo.png" style="height:120px;">
+
+<img src="images/CTU_logo.png" style="height:60px;">
+
+<img src="images/FeshStudio.png" style="height:50px;">
+
+</div>
+:::

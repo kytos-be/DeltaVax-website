@@ -21,8 +21,14 @@ website:
         text: Diseases
       - href: management.qmd
         text: Management
-      # - href: data.qmd
-      #   text: Data
+      - href: data.qmd
+        text: Data
+      - href: probiotic.qmd
+        text: Probiotic
+      - href: model.qmd
+        text: Model
+      - href: pharmaq.qmd
+        text: Pharmaq
       - href: references.qmd
         text: References
 

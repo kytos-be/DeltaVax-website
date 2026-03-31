@@ -8,28 +8,44 @@ format:
 ---
 
 ::: hero
-<div style="background-image:url('images/intro.jpg');
+```{=html}
+<div style="
+    position:relative;
     height:400px;
+    background-image:url('./images/intro.jpg');
     background-size:cover;
     background-position:center;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:white;
-    font-size:50px;
-    font-weight:bold;
-    text-align:center;
-    padding: 0 80px;
-    text-shadow:2px 2px 8px rgba(0,0,0,0.7);">
+    overflow:hidden;
+">
 
-Sustainable development of pangasius aquaculture: Managing microbiomes and farming environments
+  <div style="
+      position:absolute;
+      inset:0;
+      background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  "></div>
+
+  <div style="
+      position:relative;
+      color:white;
+      font-size:48px;
+      font-weight:bold;
+      text-align:center;
+      padding: 0 80px;
+      line-height:1.3;
+      text-shadow:2px 2px 8px rgba(0,0,0,0.7);
+  ">
+     Sustainable development of pangasius aquaculture: Managing microbiomes and farming environments
+  </div>
 
 </div>
+```
 :::
 <br>
 
 ::: {.text-justify}
-
 Aquaculture is one of the fastest growing animal food-producing sectors, with annual growth rates of 9.5% in the 1990s and 5.8% between 2001 and 2016 (FAO 2018). According to The State of World Fisheries and Aquaculture 2024 report from the Food and Agriculture Organization (FAO), global aquaculture production reached a historical high of 130.9 million tonnes in 2022, contributing more than 51% of total aquatic animal production and surpassing capture fisheries for the first time. Yet the sector is still constrained by a number of limitations, including inorganic nutrients, fish feces and feed waste, all of which make it difficult to maintain good water quality (Bentzon-Tilia et al. 2016a). In addition, outbreaks of microbial diseases are one of the main impediments to the sustainable growth of the industry (Stentiford et al. 2017; Shinn et al. 2018).
 
 Pangasius catfish (Pangasianodon hypophthalmus) remains one of the most significant farmed freshwater fish species worldwide. According to FAO’s Globefish reports, total global pangasius production in the first half of 2025 reached approximately 871,900 tonnes, with Vietnam targeting an annual output of up to 1.65 million tonnes by the end of the year. This species contributes significantly to global aquaculture output and international seafood trade, with exports valued over USD 2 billion and distribution across more than 140 countries.
