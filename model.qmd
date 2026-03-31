@@ -41,7 +41,7 @@ library(scales)
 library(readxl)
 
 # Bacterial Load
-data_BD <- read_excel("~/practice/DeltaVax-website/BienDong_data/BienDong_Data.xlsx", 
+data_BD <- readxl::read_excel("BienDong_data/BienDong_Data.xlsx", 
                       sheet = "Bacterial_Load")
 data_BD$Time <- trimws(as.character(data_BD$Time))
 data_BD$Time[data_BD$Time == "Before incubation"] <- "Control"
