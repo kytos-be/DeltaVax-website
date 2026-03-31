@@ -39,6 +39,7 @@ library(dplyr)
 library(tidyr)
 library(scales)
 library(readxl)
+library(KytoFlow)
 
 # Bacterial Load
 data_BD <- readxl::read_excel("BienDong_data/BienDong_Data.xlsx", 
