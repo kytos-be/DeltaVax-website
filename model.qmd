@@ -39,7 +39,6 @@ library(dplyr)
 library(tidyr)
 library(scales)
 library(readxl)
-library(KytoFlow)
 
 # Bacterial Load
 data_BD <- readxl::read_excel("BienDong_data/BienDong_Data.xlsx", 
@@ -76,7 +75,7 @@ ggplot(data_plot, aes(x = Time, y = Bacterial_load, color = System, group = Syst
   breaks = seq(0, 400000000, 50000000)
 ) +
 coord_cartesian(ylim = c(0, 400000000)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values =c("#ffa401" ,"#CB0001")) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -126,7 +125,7 @@ ggplot(data_plot_2, aes(x = Time, y = Bacterial_load, color = System, group = Sy
   breaks = seq(0, 400000000, 50000000)
 ) +
 coord_cartesian(ylim = c(0, 400000000)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values =c("#ffa401" ,"#CB0001")) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -176,7 +175,7 @@ ggplot(data_plot_3, aes(x = Time, y = Bacterial_load, color = System, group = Sy
   breaks = seq(0, 400000000, 50000000)
 ) +
 coord_cartesian(ylim = c(0, 400000000)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values =c("#ffa401" ,"#CB0001")) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -216,7 +215,7 @@ To better evaluate fermentation performance, bacterial load should be interprete
   <div>
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 # Cell Viability
-data_cell <- read_excel("~/practice/DeltaVax-website/BienDong_data/BienDong_Data.xlsx", 
+data_cell <- read_excel("./BienDong_data/BienDong_Data.xlsx", 
                       sheet = "Cell_Viability")
 data_cell$Time <- trimws(as.character(data_cell$Time))
 data_cell$Time[data_cell$Time == "Before incubation"] <- "Control"
@@ -250,7 +249,7 @@ ggplot(data_plot, aes(x = Time, y = Cell_Viability, color = System, group = Syst
   breaks = seq(0, 100, 20)
 ) +
 coord_cartesian(ylim = c(0, 100)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values =c("#ffa401" ,"#CB0001")) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -300,7 +299,7 @@ ggplot(data_plot, aes(x = Time, y = Cell_Viability, color = System, group = Syst
   breaks = seq(0, 100, 20)
 ) +
 coord_cartesian(ylim = c(0, 100)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values =c("#ffa401" ,"#CB0001")) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -351,7 +350,7 @@ ggplot(data_plot, aes(x = Time, y = Cell_Viability, color = System, group = Syst
   breaks = seq(0, 100, 20)
 ) +
 coord_cartesian(ylim = c(0, 100)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values =c("#ffa401" ,"#CB0001")) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -388,7 +387,7 @@ After 48 hours, both treatments exhibited a decreasing trend in cell viability, 
   <div>
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 # Total Viable
-data_total <- read_excel("~/practice/DeltaVax-website/BienDong_data/BienDong_Data.xlsx", 
+data_total <- read_excel("./BienDong_data/BienDong_Data.xlsx", 
                       sheet = "Total_Viable")
 data_total$Time <- trimws(as.character(data_total$Time))
 data_total$Time[data_total$Time == "Before incubation"] <- "Control"
@@ -422,7 +421,7 @@ ggplot(data_plot, aes(x = Time, y = Total_Viable, color = System, group = System
   breaks = seq(0, 350000000, 50000000)
 ) +
 coord_cartesian(ylim = c(0, 350000000)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values =c("#ffa401" ,"#CB0001")) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -472,7 +471,7 @@ ggplot(data_plot, aes(x = Time, y = Total_Viable, color = System, group = System
   breaks = seq(0, 350000000, 50000000)
 ) +
 coord_cartesian(ylim = c(0, 350000000)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values =c("#ffa401" ,"#CB0001")) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -523,7 +522,7 @@ ggplot(data_plot, aes(x = Time, y = Total_Viable, color = System, group = System
   breaks = seq(0, 350000000, 50000000)
 ) +
 coord_cartesian(ylim = c(0, 350000000)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values =c("#ffa401" ,"#CB0001")) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -561,7 +560,7 @@ During fermentation, total viable bacterial load increased during the early phas
   <div>
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 # Diversity
-data_div <- read_excel("~/practice/DeltaVax-website/BienDong_data/BienDong_Data.xlsx", 
+data_div <- read_excel("./BienDong_data/BienDong_Data.xlsx", 
                       sheet = "Diversity")
 data_div$Time <- trimws(as.character(data_div$Time))
 data_div$Time[data_div$Time == "Before incubation"] <- "Control"
@@ -595,7 +594,7 @@ ggplot(data_plot, aes(x = Time, y = Diversity, color = System, group = System)) 
   breaks = seq(0, 6000, 1000)
 ) +
 coord_cartesian(ylim = c(0, 6000)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values =c("#ffa401" ,"#CB0001")) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -645,7 +644,7 @@ ggplot(data_plot, aes(x = Time, y = Diversity, color = System, group = System)) 
   breaks = seq(0, 6000, 1000)
 ) +
 coord_cartesian(ylim = c(0, 6000)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values =c("#ffa401" ,"#CB0001")) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -696,7 +695,7 @@ ggplot(data_plot, aes(x = Time, y = Diversity, color = System, group = System)) 
   breaks = seq(0, 6000, 1000)
 ) +
 coord_cartesian(ylim = c(0, 6000)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values =c("#ffa401" ,"#CB0001")) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -732,7 +731,7 @@ The reduction in diversity, occurring alongside increasing biomass, suggests a t
   <div>
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 # Growth
-data_gro <- read_excel("~/practice/DeltaVax-website/BienDong_data/BienDong_Data.xlsx", 
+data_gro <- read_excel("./BienDong_data/BienDong_Data.xlsx", 
                       sheet = "Growth")
 data_gro$Time <- trimws(as.character(data_gro$Time))
 data_gro$Time[data_gro$Time == "Before incubation"] <- "Control"
@@ -766,7 +765,7 @@ ggplot(data_plot, aes(x = Time, y = Growth, color = System, group = System)) +
   breaks = seq(0, 0.6, 0.1)
 ) +
 coord_cartesian(ylim = c(0, 0.6)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values = c("#ffa401" ,"#CB0001")) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -816,7 +815,7 @@ ggplot(data_plot, aes(x = Time, y = Growth, color = System, group = System)) +
   breaks = seq(0, 0.6, 0.1)
 ) +
 coord_cartesian(ylim = c(0, 0.6)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values =c("#ffa401" ,"#CB0001")) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -867,7 +866,7 @@ ggplot(data_plot, aes(x = Time, y = Growth, color = System, group = System)) +
   breaks = seq(0, 0.6, 0.1)
 ) +
 coord_cartesian(ylim = c(0, 0.6)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values = c("#ffa401" ,"#CB0001")) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
