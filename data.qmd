@@ -33,6 +33,7 @@ Within the framework of this project, KYTOS was responsible for monitoring micro
 library(ggplot2)
 library(tidyr)
 library(scales)
+col_KYTOS <- c("#ffa401","#CB0001", "#333333", "#406c89", "#dc6f6f", "#7cd68c")
 
 data_bac <- data.frame(
   Date = as.Date(c("2025-05-26",
@@ -61,7 +62,7 @@ ggplot(data_bac, aes(x = Date, y = Bacterial_load, color = System, group = Syste
     color = NULL
   ) +
   scale_y_continuous(limits = c(0, 1800000), breaks = seq(0, 1800000, 200000)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values = col_KYTOS) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -119,7 +120,7 @@ ggplot(data_pro, aes(x = Date, y = Productivity, color = System, group = System)
     breaks = seq(0, 80, 10),
     labels = label_number(suffix = "%")
   ) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values = col_KYTOS) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -175,7 +176,7 @@ ggplot(data_cell, aes(x = Date, y = Cell_viability, color = System, group = Syst
     breaks = seq(0, 80, 10),
     labels = label_number(suffix = "%")
   ) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values = col_KYTOS) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -227,7 +228,7 @@ ggplot(data_div, aes(x = Date, y = Diversity, color = System, group = System)) +
     color = NULL
   ) +
   scale_y_continuous(limits = c(0, 4000), breaks = seq(0, 4000, 500)) +
-  scale_color_manual(values = KytoFlow::col_KYTOS) +
+  scale_color_manual(values = col_KYTOS) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -300,7 +301,7 @@ ggplot(data_feed, aes(x = factor(Date), y = Gram, fill = Feed)) +
     y = "Feed (g)",
     fill = NULL
   ) +
-  scale_fill_manual(values = KytoFlow::col_KYTOS) +
+  scale_fill_manual(values = col_KYTOS) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -352,7 +353,7 @@ ggplot(data_feed2, aes(x = factor(Date), y = Gram, fill = Feed)) +
     y = "Feed (g)",
     fill = NULL
   ) +
-  scale_fill_manual(values = KytoFlow::col_KYTOS) +
+  scale_fill_manual(values = col_KYTOS) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -404,7 +405,7 @@ ggplot(data_feed3, aes(x = factor(Date), y = Gram, fill = Feed)) +
     y = "Feed (g)",
     fill = NULL
   ) +
-  scale_fill_manual(values = KytoFlow::col_KYTOS) +
+  scale_fill_manual(values = col_KYTOS) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -456,7 +457,7 @@ ggplot(data_feed4, aes(x = factor(Date), y = Gram, fill = Feed)) +
     y = "Feed (g)",
     fill = NULL
   ) +
-  scale_fill_manual(values = KytoFlow::col_KYTOS) +
+  scale_fill_manual(values = col_KYTOS) +
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold", size = 16, hjust = 0),
@@ -627,7 +628,7 @@ ggplot(data_long, aes(x = System, y = Value, fill = System)) +
   geom_col(width = 0.6, color = "black", linewidth = 0.4, show.legend = FALSE) +
   geom_text(aes(label = round(Value, 2)), vjust = -0.4, size = 4) +
   facet_wrap(~Metric, scales = "free_y") +
-  scale_fill_manual(values = KytoFlow::col_KYTOS[3:4]) +
+  scale_fill_manual(values = col_KYTOS[3:4]) +
   labs(
     # title = "Comparison of Delta and Mini",
     x = NULL,

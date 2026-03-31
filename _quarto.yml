@@ -16,9 +16,9 @@ website:
       - href: systems.qmd
         text: Aquaculture Systems
       - href: microbiomes.qmd
-        text: Microbiomes
+        text: Microbiome
       - href: diseases.qmd
-        text: Diseases
+        text: Disease
       - href: management.qmd
         text: Management
       - href: data.qmd
