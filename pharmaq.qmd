@@ -17,17 +17,15 @@ format:
 
 PHARMAQ is a company specializing in the development of vaccines and disease prevention solutions for aquaculture and is part of Zoetis, a global leader in animal health. The company focuses on research, production, and delivery of vaccines, injection systems, and diagnostic solutions to support disease control and improve production efficiency in aquaculture.
 
-Within the framework of collaboration between PHARMAQ and KYTOS, both parties focus on developing tools for bacterial detection and quantification. The project is conducted at PHARMAQ Vietnam and KYTOS Vietnam.
-
-Specifically, the collaboration aims to develop a model capable of detecting and quantifying two major bacterial pathogens in pangasius aquaculture systems, including *Edwardsiella ictaluri* and *Aeromonas hydrophila* in pond water. In parallel, bacterial markers are developed and validated to support accurate identification and monitoring of these pathogens. The model enables tracking of bacterial dynamics over time, providing a data driven basis for disease risk assessment and supporting proactive health management strategies in aquaculture systems.
+Within the framework of the Deltavax project, with support from PHARMAQ, KYTOS implements a model training activity aimed at analyzing and monitoring bacteria in pond aquaculture environments. The activity focuses on processing and analyzing microbial data related to two important bacterial pathogens in pangasius farming, namely *Edwardsiella ictaluri* and *Aeromonas hydrophila*, while also developing microbial markers for the identification and monitoring of these pathogens in pond water samples. The results from the model allow tracking of microbial community dynamics over time, providing a basis for environmental assessment and monitoring in aquaculture systems.
 :::
 
 ## Objective
 :::{.text-justify}
 
-The objective of this study is to develop and train a machine learning model based on microbial data to detect and predict the presence and abundance of key bacterial pathogens in pangasius aquaculture, including *Edwardsiella ictaluri* and *Aeromonas hydrophila*.
+The objective of the experiment is to develop and train a machine learning model based on microbial data to detect and predict the presence as well as the abundance of two important bacterial pathogens in pangasius aquaculture, including *Edwardsiella ictaluri* and *Aeromonas hydrophila*.
 
-By integrating microbial analysis data (e.g., total bacterial load, cell viability, and community characteristics) with machine learning algorithms, the model is designed to support early detection of disease risks and prediction of bacterial dynamics in pond systems. The outcomes are expected to enhance water quality management, optimize probiotic application strategies, and reduce disease related risks under farm conditions.
+Through the integration of microbial analytical data with machine learning algorithms, the model is developed to enable early detection of pathogenic bacteria and support the prediction of bacterial dynamics in pond systems. The results from the model are expected to contribute to improving microbial management in water and reducing disease risks in practical aquaculture production.
 :::
 
 ## Experimental Preparation

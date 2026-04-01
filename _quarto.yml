@@ -14,21 +14,21 @@ website:
       - href: overview.qmd
         text: Overview
       - href: systems.qmd
-        text: Aquaculture Systems
+        text: Aquaculture systems
       - href: microbiomes.qmd
         text: Microbiome
       - href: diseases.qmd
         text: Disease
       - href: management.qmd
         text: Management
-      - href: data.qmd
-        text: Data
       - href: probiotic.qmd
         text: Probiotic
-      - href: model.qmd
-        text: Model
+      - href: optimization.qmd
+        text: Optimization
+      - href: data.qmd
+        text: Data RAS
       - href: pharmaq.qmd
-        text: Pharmaq
+        text: Pathogen model training
       - href: references.qmd
         text: References
 
