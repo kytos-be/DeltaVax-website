@@ -52,97 +52,97 @@ Through the integration of microbial analytical data with machine learning algor
 
 ![](images/kytovials.jpg){width="80%" style="margin: 0 auto; display: block;"}
 
-## Experimental procedure
+<!-- ## Experimental procedure -->
 
-### Model training
+<!-- ### Model training -->
 
-* KYTOS provided Kytovial tubes for PHARMAQ to collect and store pure bacterial cultures. 
+<!-- * KYTOS provided Kytovial tubes for PHARMAQ to collect and store pure bacterial cultures.  -->
 
-* Each bacterial strain was prepared in 5 mL of culture at a concentration of approximately 1 × 10⁸ cells/mL. 
+<!-- * Each bacterial strain was prepared in 5 mL of culture at a concentration of approximately 1 × 10⁸ cells/mL.  -->
 
-* Each strain was then aliquoted into 10 Kytovial tubes (total volume: 10 mL). 
+<!-- * Each strain was then aliquoted into 10 Kytovial tubes (total volume: 10 mL).  -->
 
-* The prepared samples were transported to the KYTOS laboratory for analysis and used as training data for the machine learning model. 
+<!-- * The prepared samples were transported to the KYTOS laboratory for analysis and used as training data for the machine learning model.  -->
 
-### Model validation experiment
+<!-- ### Model validation experiment -->
 
-The validation experiment was conducted at the PHARMAQ laboratory with technical support from KYTOS to evaluate the predictive performance of the model under simulated farm conditions.
+<!-- The validation experiment was conducted at the PHARMAQ laboratory with technical support from KYTOS to evaluate the predictive performance of the model under simulated farm conditions. -->
 
-### Bacterial biomass washing
+<!-- ### Bacterial biomass washing -->
 
-* 6 mL of bacterial culture was transferred into a 10 mL centrifuge tube. 
+<!-- * 6 mL of bacterial culture was transferred into a 10 mL centrifuge tube.  -->
 
-* Samples were centrifuged at 5,000 × g for 3 minutes. 
+<!-- * Samples were centrifuged at 5,000 × g for 3 minutes.  -->
 
-* The supernatant was carefully removed. 
+<!-- * The supernatant was carefully removed.  -->
 
-* The pellet was resuspended in 6 mL of filtered Instant Ocean solution. 
+<!-- * The pellet was resuspended in 6 mL of filtered Instant Ocean solution.  -->
 
-* The washing step was repeated once (total of two washes). 
+<!-- * The washing step was repeated once (total of two washes).  -->
 
-### Sample fixation
+<!-- ### Sample fixation -->
 
-* For bacterial samples: 600 µL of fixative solution was added to 6 mL of bacterial suspension and gently mixed. 
+<!-- * For bacterial samples: 600 µL of fixative solution was added to 6 mL of bacterial suspension and gently mixed.  -->
 
-* For pond water samples: 10 mL of fixative solution was added to 100 mL of pond water and mixed thoroughly. 
+<!-- * For pond water samples: 10 mL of fixative solution was added to 100 mL of pond water and mixed thoroughly.  -->
 
-* Samples were incubated for 30 minutes for fixation. 
+<!-- * Samples were incubated for 30 minutes for fixation.  -->
 
-### Initial control sampling (before spike-in)
+<!-- ### Initial control sampling (before spike-in) -->
 
-* **Bacterial control (S0):** 1 mL of processed bacterial suspension was transferred into a Kytovial tube and gently mixed. 
+<!-- * **Bacterial control (S0):** 1 mL of processed bacterial suspension was transferred into a Kytovial tube and gently mixed.  -->
 
-* **Matrix control (M0):** 1 mL of pond water was transferred into a Kytovial tube and gently mixed. 
+<!-- * **Matrix control (M0):** 1 mL of pond water was transferred into a Kytovial tube and gently mixed.  -->
 
-### Spike-in experimental setup
+<!-- ### Spike-in experimental setup -->
 
-| Concentration (%) | Bacterisl volume (µL) | Pond water (µL) | 
-|:-----------------:|:--------------------:|:---------------:|
-|0           |0           |      10.000     |
-|1           |100         |       9.900     |
-|2           |200         |       9.800     |
-|3           |300         |       9.700     |
-|4           |400         |       9.600     |
-|5           |500         |       9.500     |
+<!-- | Concentration (%) | Bacterisl volume (µL) | Pond water (µL) |  -->
+<!-- |:-----------------:|:--------------------:|:---------------:| -->
+<!-- |0           |0           |      10.000     | -->
+<!-- |1           |100         |       9.900     | -->
+<!-- |2           |200         |       9.800     | -->
+<!-- |3           |300         |       9.700     | -->
+<!-- |4           |400         |       9.600     | -->
+<!-- |5           |500         |       9.500     | -->
 
-: **Spike-in concentration series**
+<!-- : **Spike-in concentration series** -->
 
 
-*	Samples were prepared at six different bacterial proportions: 0%, 1%, 2%, 3%, 4%, and 5% (v/v).
+<!-- *	Samples were prepared at six different bacterial proportions: 0%, 1%, 2%, 3%, 4%, and 5% (v/v). -->
 
-*	The total volume of each sample was fixed at 10,000 µL. 
+<!-- *	The total volume of each sample was fixed at 10,000 µL.  -->
 
-### Procedure
+<!-- ### Procedure -->
 
-*	The corresponding volume of bacterial suspension was added to pond water according to each target concentration. 
+<!-- *	The corresponding volume of bacterial suspension was added to pond water according to each target concentration.  -->
 
-*	Samples were mixed thoroughly using a vortex mixer. 
+<!-- *	Samples were mixed thoroughly using a vortex mixer.  -->
 
-*	Three independent replicates were prepared for each concentration level. 
+<!-- *	Three independent replicates were prepared for each concentration level.  -->
 
-*	After mixing, 1 mL from each sample was transferred into a Kytovial tube for analysis. 
+<!-- *	After mixing, 1 mL from each sample was transferred into a Kytovial tube for analysis.  -->
 
-### Ground-truth calculation
+<!-- ### Ground-truth calculation -->
 
-The actual bacterial concentration in each spike-in sample was calculated using the following equation:
+<!-- The actual bacterial concentration in each spike-in sample was calculated using the following equation: -->
 
-$\text{Ground-truth (cells/mL)} = S_0 \times \frac{V_{\text{spike}}}{V_{\text{total}}}$
+<!-- $\text{Ground-truth (cells/mL)} = S_0 \times \frac{V_{\text{spike}}}{V_{\text{total}}}$ -->
 
-Where:
+<!-- Where: -->
 
-* $S_0$: bacterial concentration in the control sample (cells/mL) 
+<!-- * $S_0$: bacterial concentration in the control sample (cells/mL)  -->
 
-* $V_{\text{spike}}$: volume of bacterial suspension added (µL) 
+<!-- * $V_{\text{spike}}$: volume of bacterial suspension added (µL)  -->
 
-* $V_{\text{total}}$: total sample volume (10,000 µL)
+<!-- * $V_{\text{total}}$: total sample volume (10,000 µL) -->
 
-### Model evaluation
+<!-- ### Model evaluation -->
 
-*	Spike-in samples were used as input for the prediction model.
+<!-- *	Spike-in samples were used as input for the prediction model. -->
 
-*	Model outputs were compared with the calculated ground-truth values. 
+<!-- *	Model outputs were compared with the calculated ground-truth values.  -->
 
-*	Model performance was evaluated based on prediction accuracy and agreement with actual concentrations.
+<!-- *	Model performance was evaluated based on prediction accuracy and agreement with actual concentrations. -->
 
 ## Model training and evaluation results (to be updated)
 :::{.text-justify}
